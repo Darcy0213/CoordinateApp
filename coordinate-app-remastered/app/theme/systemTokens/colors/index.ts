@@ -1,0 +1,11 @@
+export { default as AlertColors } from "./alert";
+export { default as BackgroundColors } from "./background";
+export { default as ChipColors } from "./chip";
+export { default as CustomPaletteColors } from "./customPalette";
+export { default as MainColors } from "./main";
+export { default as OutlineColors } from "./outline";
+export { default as PrimaryColors } from "./primary";
+export { default as SecondaryColors } from "./secondary";
+export { default as StatesColors } from "./states";
+export { default as SurfaceColors } from "./surface";
+export { default as TertiaryColors } from "./tertiary";
