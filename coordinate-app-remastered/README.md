@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coordinate App Remastered
 
-## Getting Started
+## Table of Contents
 
-First, run the development server:
+- [Overview](#overview)
+- [Technologies](#technologies)
+- [Project Setup](#project-setup)
+
+## Overview
+
+Coordinate App Remastered is a project designed to provide a clean, maintainable, and scalable structure for a modern web application. This project uses Next.js, TypeScript, Recoil for state management, and Material-UI for styling.
+
+## Technologies
+
+Ensure you have the following technologies installed:
+
+### nvm
+
+**Version**: 1.1.12
+
+Tool that allows managing multiple versions of Node.js on a single machine.
+
+### node
+
+**Version**: 21.7.3
+
+JavaScript runtime environment. Mainly used to develop server-side applications.
+
+### yarn
+
+**Version**: 1.22.22
+
+Package manager for JavaScript projects that facilitates the installation, updating, configuration, and management of dependencies.
+
+### Next.js
+
+**Version**: 14.2.4
+
+Web development framework based on React.
+
+### React
+
+**Version**: 18
+
+Open-source JavaScript library that allows developers to create reusable and efficient components, facilitating the development and management of user interfaces.
+
+### TypeScript
+
+**Version**: 5
+
+Programming language that allows defining types for variables, functions, and objects, providing an additional layer of security and robustness to application development.
+
+## Project Setup
+
+### Clone the Repository
+
+First, clone the project repository from GitHub to your local machine:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Darcy0213/CoordinateApp.git
+cd your-repository
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install all the dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Configure Environment Variables
 
-## Learn More
+Create a .env.local file in the root directory and add any necessary environment variables:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+***Ask a coworker to send you the variables.***
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Run the Project in Development Mode
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To start the project in development mode, use the following command:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn dev
+```
