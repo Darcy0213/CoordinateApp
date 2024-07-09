@@ -1,4 +1,3 @@
-import { PresetColor, ThemeMode } from '@components/customization/types'
 import {
 	AlertColorsProps,
 	BackgroundColorsProps,
@@ -29,6 +28,7 @@ import {
 	TertiaryColors
 } from './systemTokens'
 
+import { PresetColor, ThemeMode } from '@globalTypes/customization'
 import ThemeOption from './themes'
 
 const Palette = (mode: ThemeMode, presetColor: PresetColor) => {

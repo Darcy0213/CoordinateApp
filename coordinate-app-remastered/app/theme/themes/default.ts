@@ -1,4 +1,4 @@
-import { ThemeMode } from '@components/customization/types'
+import { ThemeMode } from '@globalTypes/customization'
 import {
 	sys_blue,
 	sys_cyan,

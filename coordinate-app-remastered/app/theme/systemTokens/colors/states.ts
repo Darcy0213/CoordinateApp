@@ -1,6 +1,6 @@
 // types
 
-import { ThemeMode } from '@components/customization/types'
+import { ThemeMode } from '@globalTypes/customization'
 import { opacity } from '@theme/referenceTokens/opacity'
 import { ColorStatesProps, PaletteThemeProps } from '@theme/types/theme'
 

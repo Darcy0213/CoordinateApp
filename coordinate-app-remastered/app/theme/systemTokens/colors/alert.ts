@@ -1,4 +1,4 @@
-import { ThemeMode } from '@components/customization/types'
+import { ThemeMode } from '@globalTypes/customization'
 import { opacity } from '@theme/referenceTokens/opacity'
 import { AlertColorsProps, PaletteThemeProps } from '@theme/types/theme'
 import { hexToRGBAWithOpacity } from '@utils/colorMethods'

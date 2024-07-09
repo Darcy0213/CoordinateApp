@@ -1,4 +1,4 @@
-import { ThemeMode } from '@components/customization/types'
+import { ThemeMode } from '@globalTypes/customization'
 import { PaletteThemeProps, TertiaryColorsProps } from '@theme/types/theme'
 
 const TertiaryColors = (colors: PaletteThemeProps, mode: ThemeMode): TertiaryColorsProps => {

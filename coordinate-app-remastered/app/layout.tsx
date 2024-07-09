@@ -1,3 +1,5 @@
+import '@blocknote/core/fonts/inter.css'
+import '@blocknote/mantine/style.css'
 import MuiXLicense from '@components/MuiXLicense'
 import { AuthProvider } from '@context/AuthContext'
 import { ConfigProvider } from '@context/ConfigContext'

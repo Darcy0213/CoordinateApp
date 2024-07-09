@@ -22,7 +22,7 @@ Tool that allows managing multiple versions of Node.js on a single machine.
 
 ### node
 
-**Version**: 21.7.3
+**Version**: 22.4.1
 
 JavaScript runtime environment. Mainly used to develop server-side applications.
 

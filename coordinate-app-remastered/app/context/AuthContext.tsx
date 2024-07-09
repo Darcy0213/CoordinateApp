@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 	// Register function
 	const register = async (email: string, password: string, firstName: string, lastName: string, organizationName: string) => {
 		try {
-			await ApiAxios.put({ route: '/register', data: { email, password, firstName, lastName, organizationName } })
+			await ApiAxios.post({ route: '/register', data: { email, password, firstName, lastName, organizationName } })
 		} catch (error) {
 			console.error('Failed to register:', error)
 			throw error

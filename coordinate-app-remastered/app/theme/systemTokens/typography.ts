@@ -1,6 +1,6 @@
 import { TypographyVariantsOptions } from '@mui/material/styles'
 
-import { FontFamily } from '@components/customization/types'
+import { FontFamily } from '@globalTypes/customization'
 import { typography } from '../referenceTokens/typography'
 
 const Typography = (fontFamily: FontFamily, tablet: boolean, laptopDesktop: boolean): TypographyVariantsOptions => {

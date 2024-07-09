@@ -1,4 +1,4 @@
-import { ThemeMode } from '@components/customization/types'
+import { ThemeMode } from '@globalTypes/customization'
 import { ChipColorsProps, PaletteThemeProps } from '@theme/types/theme'
 
 const ChipColors = (colors: PaletteThemeProps, mode: ThemeMode): ChipColorsProps => {

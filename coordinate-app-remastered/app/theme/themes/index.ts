@@ -1,6 +1,6 @@
 // types
 
-import { PresetColor, ThemeMode } from '@components/customization/types'
+import { PresetColor, ThemeMode } from '@globalTypes/customization'
 import { PaletteThemeProps } from '@theme/types/theme'
 import Default from './default'
 

@@ -1,6 +1,6 @@
 // types
 
-import { ThemeMode } from '@components/customization/types'
+import { ThemeMode } from '@globalTypes/customization'
 import { BackgroundColorsProps, PaletteThemeProps } from '@theme/types/theme'
 
 const BackgroundColors = (colors: PaletteThemeProps, mode: ThemeMode): BackgroundColorsProps => {
