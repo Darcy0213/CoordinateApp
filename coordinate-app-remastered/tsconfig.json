@@ -20,12 +20,12 @@
 		"baseUrl": ".",
 		"paths": {
 			"@utils/*": ["app/utils/*"],
-			"@components/*": ["app/components/*"],
+			"@common/*": ["app/components/common/*"],
 			"@hooks/*": ["app/hooks/*"],
 			"@theme/*": ["app/theme/*"],
-			"@api/*": ["app/api/*"],
-			"@common/*": ["app/components/common/*"],
+			"@api/*": ["app/Api/*"],
 			"@context/*": ["app/context/*"],
+			"@components/*": ["app/components/*"],
 			"@globalTypes/*": ["app/types/*"]
 		}
 	},

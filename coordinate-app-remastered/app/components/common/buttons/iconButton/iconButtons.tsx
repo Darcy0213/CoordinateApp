@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material'
-import CoorIconButtonNew from './CoorIconButtonNew'
+import CoorIconButtonNew from './CoorIconButton'
 
 const CoorIconButtons = () => {
 	return (

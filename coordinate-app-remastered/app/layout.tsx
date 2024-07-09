@@ -1,4 +1,5 @@
-import MuiXLicense from '@components/common/MuiXLicense'
+import MuiXLicense from '@components/MuiXLicense'
+import { AuthProvider } from '@context/AuthContext'
 import { ConfigProvider } from '@context/ConfigContext'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 
@@ -25,8 +26,10 @@ export default function RootLayout({
 				<AppRouterCacheProvider>
 					<ConfigProvider>
 						<ThemeCustomization>
-							<MuiXLicense />
-							{children}
+							<AuthProvider>
+								<MuiXLicense />
+								{children}
+							</AuthProvider>
 						</ThemeCustomization>
 					</ConfigProvider>
 				</AppRouterCacheProvider>

@@ -1,8 +1,6 @@
+import IconGenerator from '@common/icons/IconGenerator'
 import { useTheme } from '@mui/material/styles'
 import { useEffect, useState } from 'react'
-
-import IconGenerator from '@components/common/Icons/IconGenerator'
-import { IconTypes } from '@components/common/Icons/types'
 import { color, customColor, intensity } from '../types'
 import CoorIconButtonStyled from './CoorIconButtonStyled'
 import { size } from './types'
@@ -13,14 +11,14 @@ interface CoorButtonProps {
 	color: color
 	intensity: intensity
 	customColor?: customColor
-	iconName?: IconTypes | string
+	iconName?: string
 	iconLibrary?: 'MUI' | 'MDI'
 	forceHover?: boolean
 	active?: boolean
 	onClick?: (() => void) | ((event: React.MouseEvent<HTMLButtonElement>) => void)
 	disabled?: boolean
 }
-const CoorIconButtonNew = ({
+const CoorIconButton = ({
 	size,
 	color,
 	intensity,
@@ -88,4 +86,4 @@ const CoorIconButtonNew = ({
 	)
 }
 
-export default CoorIconButtonNew
+export default CoorIconButton

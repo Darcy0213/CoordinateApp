@@ -1,12 +1,9 @@
 'use client'
 
+import { IconGenerator } from '@common/icons'
 import { Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
-
 import { useEffect, useState } from 'react'
-
-import IconGenerator from '@components/common/Icons/IconGenerator'
-import { IconTypes } from '@components/common/Icons/types'
 import { color, customColor, intensity } from '../types'
 import CoorButtonStyled from './CoorButtonStyled'
 import { size } from './types'
@@ -19,7 +16,7 @@ interface CoorButtonProps {
 	intensity: intensity
 	customColor?: customColor
 	iconPosition?: 'start' | 'end'
-	iconName?: IconTypes | string
+	iconName?: string
 	forceHover?: boolean
 	active?: boolean
 	onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined | (() => void)
