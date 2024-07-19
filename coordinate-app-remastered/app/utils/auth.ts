@@ -8,7 +8,6 @@ export const isTokenValid = (token: string | null): boolean => {
 	if (!token) {
 		return false
 	}
-
 	try {
 		// Decode the token
 		const decoded: DecodedToken = jwtDecode<DecodedToken>(token)

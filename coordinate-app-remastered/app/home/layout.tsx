@@ -1,8 +1,9 @@
+import CommonLayout from '@components/layout/CommonLayout'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
 	title: 'Home',
-	description: 'Coordinates home page'
+	description: 'Coordinate home page'
 }
 
 export default function Layout({
@@ -10,5 +11,5 @@ export default function Layout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	return <div>{children}</div>
+	return <CommonLayout>{children}</CommonLayout>
 }
