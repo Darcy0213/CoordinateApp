@@ -1,9 +1,9 @@
-import { dimensions } from "@theme/referenceTokens/dimensions";
+import { dimensions } from '@theme/referenceTokens/dimensions'
 
 const SpacingScreen = (laptopDesktop: boolean) => {
-  return {
-    default: laptopDesktop ? dimensions[100] : dimensions[0],
-  };
-};
+	return {
+		default: dimensions[8]
+	}
+}
 
-export default SpacingScreen;
+export default SpacingScreen

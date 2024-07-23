@@ -1,20 +1,12 @@
-import { BasicDimensions } from "@mui/material";
-import { dimensions } from "@theme/referenceTokens/dimensions";
+import { dimensions } from '@theme/referenceTokens/dimensions'
+import { BasicSizes } from '@theme/types/theme'
 
-const CellPadding = (laptopDesktop: boolean): BasicDimensions => {
-  return {
-    none: dimensions[0],
-    st1: laptopDesktop ? dimensions[100] : dimensions[50],
-    st2: laptopDesktop ? dimensions[50] : dimensions[25],
-    st3: laptopDesktop ? dimensions[50] : dimensions[25],
-    t1: laptopDesktop ? dimensions[150] : dimensions[125],
-    t2: laptopDesktop ? dimensions[150] : dimensions[125],
-    h1: laptopDesktop ? dimensions[300] : dimensions[275],
-    h2: laptopDesktop ? dimensions[250] : dimensions[225],
-    h3: laptopDesktop ? dimensions[250] : dimensions[225],
-    h4: laptopDesktop ? dimensions[225] : dimensions[200],
-    h5: laptopDesktop ? dimensions[225] : dimensions[200],
-  };
-};
+const CellPadding = (): BasicSizes => {
+	return {
+		lg: dimensions[12],
+		md: dimensions[8],
+		sm: dimensions[4]
+	}
+}
 
-export default CellPadding;
+export default CellPadding

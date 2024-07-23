@@ -1,15 +1,14 @@
-import { CellWidthDimensions } from "@mui/material";
-import { dimensions } from "@theme/referenceTokens/dimensions";
+import { dimensions } from '@theme/referenceTokens/dimensions'
+import { CellWidthDimensions } from '@theme/types/theme'
 
-const CellWidth = (laptopDesktop: boolean): CellWidthDimensions => {
-  return {
-    max: laptopDesktop ? dimensions[1000] : dimensions[900],
-    min: {
-      sm: dimensions[425],
-      md: dimensions[1200],
-      lg: dimensions[2500],
-    },
-  };
-};
+const CellWidth = (): CellWidthDimensions => {
+	return {
+		min: {
+			sm: dimensions[34],
+			md: dimensions[100],
+			lg: dimensions[200]
+		}
+	}
+}
 
-export default CellWidth;
+export default CellWidth

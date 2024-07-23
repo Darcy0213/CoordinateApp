@@ -1,10 +1,13 @@
 // dimensions/index.ts
-export * from "./cell";
-export * from "./drawer";
-export * from "./element";
-export * from "./frame";
-export * from "./layout";
-export * from "./modal";
-export * from "./page";
-export * from "./screen";
-export { default as Radius } from "./radius";
+export * from './avatar'
+export * from './button_chip'
+export * from './cell'
+export * from './common'
+export * from './drawer'
+export * from './frame'
+export * from './icon'
+export * from './modal'
+export * from './page'
+export { default as Radius } from './radius'
+export * from './screen'
+export * from './switch'

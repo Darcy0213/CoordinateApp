@@ -1,19 +1,17 @@
-import { BasicDimensions } from "@mui/material";
-import { dimensions } from "@theme/referenceTokens/dimensions";
+import { dimensions } from '@theme/referenceTokens/dimensions'
+import { BasicSizes } from '@theme/types/theme'
 
-const Radius = (): BasicDimensions => ({
-  none: dimensions[0],
-  st3: dimensions[50],
-  st2: dimensions[50],
-  st1: dimensions[50],
-  t2: dimensions[75],
-  t1: dimensions[75],
-  h5: dimensions[100],
-  h4: dimensions[100],
-  h3: dimensions[100],
-  h2: dimensions[125],
-  h1: dimensions[125],
-  round: dimensions[1000],
-});
+const Radius = (): BasicSizes => ({
+	round: dimensions[80],
+	'4xl': dimensions[10],
+	'3xl': dimensions[10],
+	'2xl': dimensions[8],
+	xl: dimensions[8],
+	lg: dimensions[6],
+	md: dimensions[4],
+	sm: dimensions[4],
+	xs: dimensions[4],
+	none: dimensions[0]
+})
 
-export default Radius;
+export default Radius

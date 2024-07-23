@@ -1,13 +1,9 @@
-import { dimensions } from "@theme/referenceTokens/dimensions";
+import { dimensions } from '@theme/referenceTokens/dimensions'
 
 const PaddingScreen = (laptopDesktop: boolean, tablet: boolean) => {
-  return {
-    default: laptopDesktop
-      ? dimensions[100]
-      : tablet
-      ? dimensions[50]
-      : dimensions[0],
-  };
-};
+	return {
+		default: dimensions[8]
+	}
+}
 
-export default PaddingScreen;
+export default PaddingScreen
