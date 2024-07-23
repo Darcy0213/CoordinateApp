@@ -106,6 +106,12 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
 				icon: {
 					width: Dimensions.themeIconWidth,
 					height: Dimensions.themeIconHeight
+				},
+				object: {
+					width: Dimensions.themeObjectPageDimensions.width,
+					height: Dimensions.themeObjectPageDimensions.height,
+					padding: Dimensions.themeObjectPageDimensions.padding,
+					spacing: Dimensions.themeObjectPageDimensions.spacing
 				}
 			}
 		}),

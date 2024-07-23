@@ -24,7 +24,7 @@ export default function useDimensions(mobile: boolean, tablet: boolean, laptopDe
 		themeScreenPadding: useMemo(() => Dimensions.ScreenPadding(laptopDesktop, tablet), [laptopDesktop, tablet]),
 		themeScreenWidth: useMemo(() => Dimensions.ScreenWidth(laptopDesktop, tablet), [laptopDesktop, tablet]),
 		themeScreenSpacing: useMemo(() => Dimensions.ScreenSpacing(laptopDesktop), [laptopDesktop]),
-		themeModalWidth: useMemo(() => Dimensions.ModalsWidth(laptopDesktop), [laptopDesktop]),
+		themeModalWidth: useMemo(() => Dimensions.ModalsWidth(), []),
 		themeModalHeight: useMemo(() => Dimensions.ModalsHeight(), []),
 		themeModalPadding: useMemo(() => Dimensions.ModalPadding(), []),
 		themeModalSpacing: useMemo(() => Dimensions.ModalSpacing(), []),
@@ -40,6 +40,7 @@ export default function useDimensions(mobile: boolean, tablet: boolean, laptopDe
 		themeButtonChipSpacing: useMemo(() => Dimensions.ButtonChipSpacing(), []),
 		themeButtonChipPaddingNonSide: useMemo(() => Dimensions.ButtonChipPaddingNonSide(), []),
 		themeIconWidth: useMemo(() => Dimensions.IconWidth(), []),
-		themeIconHeight: useMemo(() => Dimensions.IconHeight(), [])
+		themeIconHeight: useMemo(() => Dimensions.IconHeight(), []),
+		themeObjectPageDimensions: useMemo(() => SystemTokens.ObjectPageDimensions(), [])
 	}
 }

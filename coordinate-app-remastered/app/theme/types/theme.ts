@@ -264,6 +264,12 @@ export type CustomDimensionsProps = {
 	}
 	modal: { width: ModalWidth; height: ModalHeight; padding: BasicSizes; spacing: BasicSizes }
 	drawer: { padding: BasicSizes; spacing: BasicSizes; width: WidthDimensions }
+	object: {
+		width: string
+		height: string
+		padding: BasicSizes
+		spacing: string
+	}
 }
 export interface PageSpacing {
 	default: string
