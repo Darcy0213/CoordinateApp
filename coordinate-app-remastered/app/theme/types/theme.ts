@@ -344,3 +344,14 @@ export interface ModalWidth {
 export interface ModalHeight {
 	object: string
 }
+
+type Elevation = {
+	boxShadow: string
+	backdropFilter: string
+}
+
+export interface CustomEffects {
+	blur: { 1: string; 2: string; 3: string; 4: string }
+	elevation: { 1: Elevation; 2: Elevation }
+	shadow: { modal: string; card: string }
+}

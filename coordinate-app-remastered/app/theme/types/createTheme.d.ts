@@ -1,8 +1,9 @@
 import '@mui/material/styles'
-import { CustomDimensionsProps } from './theme'
+import { CustomDimensionsProps, CustomEffects } from './theme'
 declare module '@mui/material/styles' {
 	interface Theme {
 		dimensions: CustomDimensionsProps
+		effects: CustomEffects
 	}
 
 	interface TypographyVariants {

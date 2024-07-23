@@ -8,7 +8,7 @@ import Palette from './palette'
 
 import { useConfigContext } from '@context/ConfigContext'
 import useDimensions from '@hooks/useDimensions'
-import { Typography } from './systemTokens'
+import { Blur, Elevation, Shadow, Typography } from './systemTokens'
 
 type ThemeCustomizationProps = {
 	children: ReactNode
@@ -33,6 +33,10 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[mode, fontFamily, laptopDesktop, tablet]
 	)
+
+	const themeBlur = useMemo(() => Blur(), [])
+	const themeElevation = useMemo(() => Elevation(), [])
+	const themeShadow = useMemo(() => Shadow(), [])
 
 	const themeOptions: ThemeOptions = useMemo(
 		() => ({
@@ -113,6 +117,11 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
 					padding: Dimensions.themeObjectPageDimensions.padding,
 					spacing: Dimensions.themeObjectPageDimensions.spacing
 				}
+			},
+			effects: {
+				blur: themeBlur,
+				elevation: themeElevation,
+				shadow: themeShadow
 			}
 		}),
 		[theme, themeTypography, Dimensions]
