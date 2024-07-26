@@ -13,15 +13,8 @@ const OutlineColors = (colors: PaletteThemeProps, mode: ThemeMode): OutlineColor
 		variant: darkMode ? (gray?.[100] as string) : (gray?.[700] as string),
 		high: darkMode ? (gray?.[900] as string) : (gray?.[100] as string),
 		soft: darkMode ? (gray?.[80] as string) : (gray?.[800] as string),
-		opacity_30: darkMode
-			? {
-					color: opacityRT['30%_dark'].color,
-					opacity: opacityRT['30%_dark'].opacity
-			  }
-			: {
-					color: opacityRT['30%_light'].color,
-					opacity: opacityRT['30%_light'].opacity
-			  },
+		opacity_30: darkMode ? opacityRT['30_dark'] : opacityRT['30_light'],
+
 		magenta: darkMode ? (color.magenta?.[200] as string) : (color.magenta?.[700] as string),
 		cyan: darkMode ? (color.cyan?.[200] as string) : (color.cyan?.[700] as string),
 		yellow: darkMode ? (color.yellow?.[200] as string) : (color.yellow?.[700] as string),

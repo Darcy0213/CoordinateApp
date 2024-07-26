@@ -12,10 +12,11 @@ export function calculateButtonStyle(
 	theme: Theme,
 	customColor?: customColor | undefined
 ): ButtonStyle {
-	const padding = theme.dimensions.element.iconButton.padding
+	const padding = theme.dimensions.buttonChip.padding
 	const radius = theme.dimensions.radius
 
-	let borderRadius = ''
+	let borderRadius: string = ''
+	let paddingButton: string = ''
 	// Destructure generated color styles based on provided parameters
 	const { backdropFilter, backgroundColor, fontColor, outline, outlineOffset } = generateColorStyles(
 		theme,
@@ -25,32 +26,30 @@ export function calculateButtonStyle(
 		active,
 		customColor
 	)
-
-	let paddingButton: string
 	// Determine padding and border radius based on the button's size
 	switch (size) {
-		case 'h4':
-			paddingButton = `${padding.h4} ${padding.h4}`
-			borderRadius = theme.dimensions.radius.h4
+		case 'xl':
+			paddingButton = padding.xl as string
+			borderRadius = radius.xl as string
 			break
-		case 't1':
-			paddingButton = `${padding.t1} ${padding.t1}`
-			borderRadius = radius.t1
+		case 'lg':
+			paddingButton = padding.lg as string
+			borderRadius = radius.lg as string
 			break
-		case 'st1':
-			paddingButton = `${padding.st1} ${padding.st1}`
-			borderRadius = radius.st1
+		case 'md':
+			paddingButton = padding.md as string
+			borderRadius = radius.md as string
 			break
-		case 'st2':
-			paddingButton = `${padding.st2} ${padding.st2}`
-			borderRadius = radius.st2
+		case 'sm':
+			paddingButton = padding['2sm'] as string
+			borderRadius = radius.sm as string
 			break
-		case 'st3':
-			paddingButton = `${padding.st3} ${padding.st3}`
-			borderRadius = radius.st3
+		case 'xs':
+			paddingButton = padding.xs as string
+			borderRadius = radius.xs as string
 			break
 		default:
-			paddingButton = '' // O manejar un caso predeterminado si es necesario
+			paddingButton = ''
 	}
 
 	return { fontColor, backgroundColor, paddingButton, backdropFilter, outline, outlineOffset, borderRadius }

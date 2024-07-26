@@ -1,4 +1,3 @@
-export { default as ModalElevation } from './elevation'
 export { default as ModalsHeight } from './height'
 export { default as ModalPadding } from './padding'
 export { default as ModalSpacing } from './spacing'

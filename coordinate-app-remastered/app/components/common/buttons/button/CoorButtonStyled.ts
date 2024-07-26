@@ -2,7 +2,6 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import Button from '@mui/material/Button'
 import { Theme } from '@mui/material/styles'
-import { createBackgroundWithOpacity } from '@utils/colorMethods'
 
 interface Props {
 	theme: Theme
@@ -61,8 +60,8 @@ const CoorButtonStyled = styled(Button, {
 		}
 
 		&:disabled {
-			color: ${theme.palette.state.disable_on_surface};
-			background: ${createBackgroundWithOpacity(theme.palette.main.surface_lowest.color, theme.palette.main.surface_lowest.opacity)};
+			color: ${theme.palette.state.disabled};
+			background: ${theme.palette.main.surface_lowest};
 			border: none;
 			outline: none;
 		}

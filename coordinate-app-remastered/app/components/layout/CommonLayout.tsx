@@ -28,7 +28,7 @@ const CommonLayout: React.FC<Props> = ({ children }: Props) => {
 				<Box
 					display={'flex'}
 					className="header"
-					padding={`${theme.dimensions.frame.padding.st1} ${theme.dimensions.frame.padding.t1}`}
+					padding={`${theme.dimensions.frame.padding.sm} ${theme.dimensions.frame.padding.lg}`}
 				>
 					Header
 				</Box>

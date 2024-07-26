@@ -1,7 +1,6 @@
 import { ThemeMode } from '@globalTypes/customization'
 import { opacity } from '@theme/referenceTokens/opacity'
 import { AlertColorsProps, PaletteThemeProps } from '@theme/types/theme'
-import { hexToRGBAWithOpacity } from '@utils/colorMethods'
 
 const AlertColors = (colors: PaletteThemeProps, mode: ThemeMode): AlertColorsProps => {
 	const color = colors
@@ -14,14 +13,10 @@ const AlertColors = (colors: PaletteThemeProps, mode: ThemeMode): AlertColorsPro
 		error: {
 			surface: {
 				high: red?.[700] as string,
-				medium: red?.['700-50%'] as string,
-				low: red?.['700-30%'] as string,
-				lowest: darkMode
-					? hexToRGBAWithOpacity(opacity['8%_light'].color, opacity['8%_light'].opacity)
-					: hexToRGBAWithOpacity(opacity['8%_dark'].color, opacity['8%_dark'].opacity),
-				outline: darkMode
-					? hexToRGBAWithOpacity(opacity['8%_light'].color, opacity['8%_light'].opacity)
-					: hexToRGBAWithOpacity(opacity['8%_dark'].color, opacity['8%_dark'].opacity)
+				medium: red[50] as string,
+				low: red[50] as string,
+				lowest: darkMode ? opacity['8_light'] : opacity['8_dark'],
+				outline: darkMode ? opacity['8_light'] : opacity['8_dark']
 			},
 			on_surface: {
 				normal: red?.[50] as string,
@@ -32,14 +27,10 @@ const AlertColors = (colors: PaletteThemeProps, mode: ThemeMode): AlertColorsPro
 		success: {
 			surface: {
 				high: lime?.[700] as string,
-				medium: lime?.['700-50%'] as string,
-				low: lime?.['700-30%'] as string,
-				lowest: darkMode
-					? hexToRGBAWithOpacity(opacity['8%_light'].color, opacity['8%_light'].opacity)
-					: hexToRGBAWithOpacity(opacity['8%_dark'].color, opacity['8%_dark'].opacity),
-				outline: darkMode
-					? hexToRGBAWithOpacity(opacity['8%_light'].color, opacity['8%_light'].opacity)
-					: hexToRGBAWithOpacity(opacity['8%_dark'].color, opacity['8%_dark'].opacity)
+				medium: lime?.[50] as string,
+				low: lime?.[50] as string,
+				lowest: darkMode ? opacity['8_light'] : opacity['8_dark'],
+				outline: darkMode ? opacity['8_light'] : opacity['8_dark']
 			},
 			on_surface: {
 				normal: lime?.[50] as string,
@@ -50,14 +41,10 @@ const AlertColors = (colors: PaletteThemeProps, mode: ThemeMode): AlertColorsPro
 		warning: {
 			surface: {
 				high: orange?.[500] as string,
-				medium: orange?.['500-50%'] as string,
-				low: orange?.['500-30%'] as string,
-				lowest: darkMode
-					? hexToRGBAWithOpacity(opacity['8%_light'].color, opacity['8%_light'].opacity)
-					: hexToRGBAWithOpacity(opacity['8%_dark'].color, opacity['8%_dark'].opacity),
-				outline: darkMode
-					? hexToRGBAWithOpacity(opacity['8%_light'].color, opacity['8%_light'].opacity)
-					: hexToRGBAWithOpacity(opacity['8%_dark'].color, opacity['8%_dark'].opacity)
+				medium: orange?.[50] as string,
+				low: orange?.[50] as string,
+				lowest: darkMode ? opacity['8_light'] : opacity['8_dark'],
+				outline: darkMode ? opacity['8_light'] : opacity['8_dark']
 			},
 			on_surface: {
 				normal: orange?.[50] as string,

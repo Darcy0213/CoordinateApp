@@ -13,6 +13,7 @@ export function calculateButtonStyle(
 	customColor?: customColor | undefined
 ): ButtonStyle {
 	let borderRadius = ''
+	let spacingButton = ''
 	// Destructure generated color styles based on provided parameters
 	const { backdropFilter, backgroundColor, fontColor, outline, outlineOffset } = generateColorStyles(
 		theme,
@@ -25,29 +26,35 @@ export function calculateButtonStyle(
 
 	let paddingButton: string
 	// Determine padding and border radius based on the button's size
+	const dimensions = theme.dimensions.buttonChip
+	const radius = theme.dimensions.radius
 	switch (size) {
-		case 'h4':
-			paddingButton = `${theme.dimensions.element.buttonTextIcon.padding.vertical.h4} ${theme.dimensions.element.buttonTextIcon.padding.horizontal.h4}`
-			borderRadius = theme.dimensions.radius.h4
+		case 'xl':
+			paddingButton = `${dimensions.padding.xl} ${theme.dimensions.buttonChip.padding['5xl']}`
+			borderRadius = radius.xl as string
+			spacingButton = dimensions.spacing.lg as string
 
 			break
-		case 't1':
-			paddingButton = `${theme.dimensions.element.buttonTextIcon.padding.vertical.t1} ${theme.dimensions.element.buttonTextIcon.padding.horizontal.t1}`
-			borderRadius = theme.dimensions.radius.t1
+		case 'lg':
+			paddingButton = `${dimensions.padding.lg} ${dimensions.padding['4xl']}`
+			borderRadius = radius.lg as string
+			spacingButton = dimensions.spacing.md as string
 
 			break
-		case 'st1':
-			paddingButton = `${theme.dimensions.element.buttonTextIcon.padding.vertical.st1} ${theme.dimensions.element.buttonTextIcon.padding.horizontal.st1}`
-			borderRadius = theme.dimensions.radius.st1
+		case 'md':
+			paddingButton = `${dimensions.padding.md} ${dimensions.padding['2xl']}`
+			borderRadius = radius.md as string
+			spacingButton = dimensions.spacing.sm as string
 			break
-		case 'st3':
-			paddingButton = `${theme.dimensions.element.buttonTextIcon.padding.vertical.st3} ${theme.dimensions.element.buttonTextIcon.padding.horizontal.st3}`
-			borderRadius = theme.dimensions.radius.st3
+		case 'xs':
+			paddingButton = `${dimensions.padding.xs} ${dimensions.padding['2sm']}`
+			borderRadius = radius.xs as string
+			spacingButton = dimensions.spacing.xs as string
 
 			break
 		default:
 			paddingButton = ''
 	}
 
-	return { fontColor, backgroundColor, paddingButton, backdropFilter, outline, outlineOffset, borderRadius }
+	return { fontColor, backgroundColor, paddingButton, backdropFilter, outline, outlineOffset, borderRadius, spacingButton }
 }

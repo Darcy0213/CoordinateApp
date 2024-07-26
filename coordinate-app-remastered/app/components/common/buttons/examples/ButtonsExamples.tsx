@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
-import CoorButton from './CoorButton'
+import { CoorButton } from '../button'
 
-const CoorButtons = () => {
+export default function ButtonsExamples() {
 	return (
 		<Box
 			sx={{ padding: '10px' }}
@@ -20,7 +20,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="st1"
+					size="md"
 					iconName="help"
 					iconPosition="start"
 				/>
@@ -29,7 +29,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="t1"
+					size="md"
 					iconName="help"
 					iconPosition="end"
 					forceHover
@@ -39,7 +39,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 					forceHover
 					iconName="help"
 					iconPosition="end"
@@ -50,7 +50,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
@@ -58,7 +58,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -72,14 +72,14 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -88,7 +88,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
@@ -96,7 +96,7 @@ const CoorButtons = () => {
 					label="Button"
 					color="custom"
 					customColor="purple"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -109,7 +109,7 @@ const CoorButtons = () => {
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					iconPosition="start"
 				/>
@@ -117,7 +117,7 @@ const CoorButtons = () => {
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -125,14 +125,14 @@ const CoorButtons = () => {
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -145,13 +145,13 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -159,14 +159,14 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -179,13 +179,13 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -193,14 +193,14 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -213,13 +213,13 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -227,14 +227,14 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -250,7 +250,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="main"
-					size="st3"
+					size="xs"
 				/>
 				<CoorButton
 					iconPosition="start"
@@ -258,7 +258,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="main"
-					size="st3"
+					size="xs"
 					forceHover
 				/>
 
@@ -268,7 +268,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="main"
-					size="st3"
+					size="xs"
 					active
 				/>
 				<CoorButton
@@ -277,7 +277,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="main"
-					size="st3"
+					size="xs"
 					disabled
 				/>
 			</Box>
@@ -290,13 +290,13 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="main"
-					size="st1"
+					size="md"
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="main"
-					size="st1"
+					size="md"
 					forceHover
 				/>
 
@@ -304,14 +304,14 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="main"
-					size="st1"
+					size="md"
 					active
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="main"
-					size="st1"
+					size="md"
 					disabled
 				/>
 			</Box>
@@ -324,13 +324,13 @@ const CoorButtons = () => {
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="t1"
+					size="md"
 				/>
 				<CoorButton
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="t1"
+					size="md"
 					forceHover
 				/>
 
@@ -338,14 +338,14 @@ const CoorButtons = () => {
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="t1"
+					size="md"
 					active
 				/>
 				<CoorButton
 					intensity="invert"
 					label="Button"
 					color="main"
-					size="t1"
+					size="md"
 					disabled
 				/>
 			</Box>
@@ -358,13 +358,13 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -372,14 +372,14 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -392,13 +392,13 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -406,14 +406,14 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -426,13 +426,13 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -440,14 +440,14 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="main"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -461,13 +461,13 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="high"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -475,14 +475,14 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="high"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -495,13 +495,13 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -509,14 +509,14 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -529,13 +529,13 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 
@@ -543,14 +543,14 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -563,27 +563,27 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -596,27 +596,27 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="error"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -630,27 +630,27 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="high"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="high"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="high"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -663,27 +663,27 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="medium"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -696,27 +696,27 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="low"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -729,27 +729,27 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -762,27 +762,27 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="warning"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -796,7 +796,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="success"
-					size="t1"
+					size="md"
 					iconName="help"
 					iconPosition="start"
 				/>
@@ -804,7 +804,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="success"
-					size="t1"
+					size="md"
 					forceHover
 					iconName="help"
 					iconPosition="start"
@@ -813,7 +813,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="success"
-					size="t1"
+					size="md"
 					active
 					iconName="help"
 					iconPosition="start"
@@ -822,7 +822,7 @@ const CoorButtons = () => {
 					intensity="high"
 					label="Button"
 					color="success"
-					size="t1"
+					size="md"
 					disabled
 					iconName="help"
 					iconPosition="start"
@@ -837,7 +837,7 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					iconPosition="start"
 				/>
@@ -845,7 +845,7 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="success"
-					size="st1"
+					size="md"
 					forceHover
 					iconName="help"
 					iconPosition="start"
@@ -854,7 +854,7 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="success"
-					size="st1"
+					size="md"
 					active
 					iconName="help"
 					iconPosition="start"
@@ -863,7 +863,7 @@ const CoorButtons = () => {
 					intensity="medium"
 					label="Button"
 					color="success"
-					size="st1"
+					size="md"
 					disabled
 					iconName="help"
 					iconPosition="start"
@@ -878,7 +878,7 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					iconPosition="start"
 				/>
@@ -886,7 +886,7 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					forceHover
 					iconName="help"
 					iconPosition="start"
@@ -895,7 +895,7 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					active
 					iconName="help"
 					iconPosition="start"
@@ -904,7 +904,7 @@ const CoorButtons = () => {
 					intensity="low"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					disabled
 					iconName="help"
 					iconPosition="start"
@@ -919,27 +919,27 @@ const CoorButtons = () => {
 					intensity="lowest"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="lowest"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
@@ -952,32 +952,30 @@ const CoorButtons = () => {
 					intensity="outline"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					forceHover
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					active
 				/>
 				<CoorButton
 					intensity="outline"
 					label="Button"
 					color="success"
-					size="h4"
+					size="xl"
 					disabled
 				/>
 			</Box>
 		</Box>
 	)
 }
-
-export default CoorButtons

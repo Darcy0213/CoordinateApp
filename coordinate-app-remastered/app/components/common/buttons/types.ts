@@ -6,6 +6,7 @@ export interface ButtonStyle {
 	outline: string
 	outlineOffset: string
 	borderRadius: string
+	spacingButton?: string
 }
 
 export type color = 'main' | 'error' | 'success' | 'warning' | 'custom'

@@ -1,1 +1,1 @@
-export type size = 'h4' | 't1' | 'st1' | 'st3'
+export type size = 'xl' | 'lg' | 'md' | 'xs'

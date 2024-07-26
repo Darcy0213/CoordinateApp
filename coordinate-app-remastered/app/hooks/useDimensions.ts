@@ -19,7 +19,6 @@ export default function useDimensions(mobile: boolean, tablet: boolean, laptopDe
 		themeCellWidth: useMemo(() => Dimensions.CellWidth(), []),
 		themeCellHeight: useMemo(() => Dimensions.CellHeight(), []),
 		themePagePadding: useMemo(() => Dimensions.PagePadding(), []),
-		themePageWidth: useMemo(() => Dimensions.PageWidth(onlyLaptop, onlyDesktop, tablet), [onlyLaptop, onlyDesktop, tablet]),
 		themePageSpacing: useMemo(() => Dimensions.PageSpacing(), []),
 		themeScreenPadding: useMemo(() => Dimensions.ScreenPadding(laptopDesktop, tablet), [laptopDesktop, tablet]),
 		themeScreenWidth: useMemo(() => Dimensions.ScreenWidth(laptopDesktop, tablet), [laptopDesktop, tablet]),

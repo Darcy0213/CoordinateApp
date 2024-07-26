@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
-import CoorIconButtonNew from './CoorIconButton'
+import { CoorIconButton } from '..'
 
-const CoorIconButtons = () => {
+export default function IconButtonsExamples() {
 	return (
 		<Box
 			sx={{ padding: '10px' }}
@@ -15,35 +15,35 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="custom"
 					customColor="magenta"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="custom"
 					customColor="magenta"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="custom"
 					customColor="magenta"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="custom"
 					customColor="magenta"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -53,31 +53,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -87,31 +87,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -121,31 +121,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -155,31 +155,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -189,31 +189,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -223,31 +223,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -257,31 +257,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -291,31 +291,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -325,31 +325,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -359,31 +359,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -393,31 +393,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -427,31 +427,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -461,31 +461,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -495,31 +495,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -529,31 +529,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -563,31 +563,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -597,31 +597,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="invert"
 					color="main"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -632,31 +632,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -666,31 +666,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -700,31 +700,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -734,31 +734,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -768,31 +768,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -803,31 +803,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -837,31 +837,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -871,31 +871,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -905,31 +905,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -939,31 +939,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -974,31 +974,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1008,31 +1008,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1042,31 +1042,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1076,31 +1076,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1110,31 +1110,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="success"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1145,31 +1145,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -1179,31 +1179,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -1213,31 +1213,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -1247,31 +1247,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -1281,31 +1281,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="h4"
+					size="xl"
 					iconName="help"
 					disabled
 				/>
@@ -1316,31 +1316,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -1350,31 +1350,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -1384,31 +1384,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -1418,31 +1418,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -1452,31 +1452,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="t1"
+					size="lg"
 					iconName="help"
 					disabled
 				/>
@@ -1487,31 +1487,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="high"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1521,31 +1521,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="medium"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1555,31 +1555,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="low"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1589,31 +1589,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="lowest"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1623,31 +1623,31 @@ const CoorIconButtons = () => {
 				display={'flex'}
 				flexDirection={'row'}
 			>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					forceHover
 				/>
 
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					active
 				/>
-				<CoorIconButtonNew
+				<CoorIconButton
 					intensity="outline"
 					color="warning"
-					size="st1"
+					size="md"
 					iconName="help"
 					disabled
 				/>
@@ -1655,5 +1655,3 @@ const CoorIconButtons = () => {
 		</Box>
 	)
 }
-
-export default CoorIconButtons

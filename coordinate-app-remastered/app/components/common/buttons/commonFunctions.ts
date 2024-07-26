@@ -1,7 +1,7 @@
 import { Theme } from '@mui/material/styles'
 
+import { createLinearGradient, createLinearGradientThirdColor } from '@utils/colorMethods'
 import { color, customColor, intensity } from './types'
-import { convertPercentageToDecimal, createBackgroundWithOpacity, createLinearGradient, createLinearGradientThirdColor, hexToRgb } from '@utils/colorMethods'
 export function generateColorStyles(
 	theme: Theme,
 	color: color,
@@ -13,8 +13,8 @@ export function generateColorStyles(
 	// Define variables for style properties
 	const outline30 = theme.palette.outline.opacity_30
 	const hoverInvertState = theme.palette.state.hover_invert
-	const focusInvertState = theme.palette.state.focus_invert
-	const hoverState = theme.palette.state.hoverValues
+	const focusInvertState = theme.palette.state.focus
+	const hoverState = theme.palette.state.hover
 	const focusState = theme.palette.state.focus
 	// Initialize style properties with default values
 	let fontColor = ''
@@ -32,131 +32,85 @@ export function generateColorStyles(
 			case 'high':
 				fontColor = surfaceColor.on_surface
 				backgroundColor = surfaceColor.surface_high
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverInvertState.color), convertPercentageToDecimal(hoverInvertState.opacity))}, ${
-						surfaceColor.surface_high
-					}`
+					backgroundColor = `${createLinearGradient(hoverInvertState)}, ${surfaceColor.surface_high}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusInvertState.color), convertPercentageToDecimal(focusInvertState.opacity))}, ${
-						surfaceColor.surface_high
-					}`
+					backgroundColor = `${createLinearGradient(focusInvertState)}, ${surfaceColor.surface_high}`
 				}
 				break
 			case 'medium':
 				fontColor = surfaceColor.on_surface
-				backgroundColor = createBackgroundWithOpacity(surfaceColor.surface_medium.color, surfaceColor.surface_medium.opacity)
+				backgroundColor = surfaceColor.surface_medium
 				backdropFilter = 'blur(25px)'
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity)
-					)}, ${createBackgroundWithOpacity(surfaceColor.surface_medium.color, surfaceColor.surface_medium.opacity)}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${surfaceColor.surface_medium}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity)
-					)}, ${createBackgroundWithOpacity(surfaceColor.surface_medium.color, surfaceColor.surface_medium.opacity)}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${surfaceColor}`
 				}
 				break
 			case 'invert':
 				fontColor = surfaceColor.on_surface
-				backgroundColor = createBackgroundWithOpacity(surfaceColor.surface_lowest.color, surfaceColor.surface_lowest.opacity)
+				backgroundColor = surfaceColor.surface_lowest
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity),
-						hexToRgb(surfaceColor.surface_lowest.color),
-						convertPercentageToDecimal(surfaceColor.surface_lowest.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(hoverState, surfaceColor.surface_lowest)
 				}
 				if (active) {
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity),
-						hexToRgb(surfaceColor.surface_lowest.color),
-						convertPercentageToDecimal(surfaceColor.surface_lowest.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(focusState, surfaceColor.surface_lowest)
 				}
 				break
 			case 'low':
 				fontColor = surfaceColor.on_surface_medium
-				backgroundColor = createBackgroundWithOpacity(surfaceColor.surface_low.color, surfaceColor.surface_low.opacity)
+				backgroundColor = surfaceColor.surface_low
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity),
-						hexToRgb(surfaceColor.surface_low.color),
-						convertPercentageToDecimal(surfaceColor.surface_low.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(hoverState, surfaceColor.surface_low)
 				}
 				if (active) {
 					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity),
-						hexToRgb(surfaceColor.surface_low.color),
-						convertPercentageToDecimal(surfaceColor.surface_low.opacity)
+						focusState,
+
+						surfaceColor.surface_low
 					)
 				}
 				break
 			case 'lowest':
 				fontColor = surfaceColor.on_surface_invert
-				backgroundColor = createBackgroundWithOpacity(surfaceColor.surface_lowest.color, surfaceColor.surface_lowest.opacity)
+				backgroundColor = surfaceColor.surface_lowest
 
 				if (hover && !active) {
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity),
-						hexToRgb(surfaceColor.surface_lowest.color),
-						convertPercentageToDecimal(surfaceColor.surface_lowest.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(hoverState, surfaceColor.surface_lowest)
 				}
 				if (active) {
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity),
-						hexToRgb(surfaceColor.surface_lowest.color),
-						convertPercentageToDecimal(surfaceColor.surface_lowest.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(focusState, surfaceColor.surface_lowest)
 				}
 				break
 			case 'outline':
 				fontColor = surfaceColor.on_surface_invert
-				backgroundColor = createBackgroundWithOpacity(surfaceColor.surface_outline.color, surfaceColor.surface_outline.opacity)
+				backgroundColor = surfaceColor.surface_outline
 				outline = `1px solid ${outlineVariant}`
 				outlineOffset = '0px'
 				if (hover && !active) {
 					outlineOffset = '-1px'
 					outline = `1px solid ${outlineMain}`
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity),
-						hexToRgb(surfaceColor.surface_outline.color),
-						convertPercentageToDecimal(surfaceColor.surface_outline.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(hoverState, surfaceColor.surface_outline)
 				}
 				if (active) {
 					outlineOffset = '-2px'
 					outline = `2px solid ${outlineMain}`
-					backgroundColor = createLinearGradientThirdColor(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity),
-						hexToRgb(surfaceColor.surface_lowest.color),
-						convertPercentageToDecimal(surfaceColor.surface_lowest.opacity)
-					)
+					backgroundColor = createLinearGradientThirdColor(focusState, surfaceColor.surface_lowest)
 				}
 				break
 			default:
@@ -170,62 +124,50 @@ export function generateColorStyles(
 			case 'high':
 				fontColor = alertError.on_surface.normal
 				backgroundColor = alertError.surface.high
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertError.surface.high
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertError.surface.high}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusInvertState.color), convertPercentageToDecimal(focusInvertState.opacity))}, ${
-						alertError.surface.high
-					}`
+					backgroundColor = `${createLinearGradient(focusInvertState)}, ${alertError.surface.high}`
 				}
 
 				break
 			case 'medium':
 				fontColor = alertError.on_surface.invert
 				backgroundColor = alertError.surface.medium
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertError.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertError.surface.medium}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertError.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertError.surface.medium}`
 				}
 				break
 			case 'low':
 				fontColor = alertError.on_surface.invert
 				backgroundColor = alertError.surface.low
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverInvertState.color), convertPercentageToDecimal(hoverInvertState.opacity))}, ${
-						alertError.surface.low
-					}`
+					backgroundColor = `${createLinearGradient(hoverInvertState)}, ${alertError.surface.low}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusInvertState.color), convertPercentageToDecimal(focusInvertState.opacity))}, ${
-						alertError.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(focusInvertState)}, ${alertError.surface.medium}`
 				}
 				break
 			case 'lowest':
@@ -233,34 +175,26 @@ export function generateColorStyles(
 				backgroundColor = alertError.surface.outline
 
 				if (hover && !active) {
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertError.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertError.surface.outline}`
 				}
 				if (active) {
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertError.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertError.surface.outline}`
 				}
 				break
 			case 'outline':
 				fontColor = alertError.on_surface.variant
 				backgroundColor = 'transparent'
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertError.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertError.surface.outline}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertError.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertError.surface.outline}`
 				}
 				break
 
@@ -274,64 +208,52 @@ export function generateColorStyles(
 			case 'high':
 				fontColor = alertWarning.on_surface.normal
 				backgroundColor = alertWarning.surface.high
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverInvertState.color), convertPercentageToDecimal(hoverInvertState.opacity))}, ${
-						alertWarning.surface.high
-					}`
+					backgroundColor = `${createLinearGradient(hoverInvertState)}, ${alertWarning.surface.high}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusInvertState.color), convertPercentageToDecimal(focusInvertState.opacity))}, ${
-						alertWarning.surface.high
-					}`
+					backgroundColor = `${createLinearGradient(focusInvertState)}, ${alertWarning.surface.high}`
 				}
 
 				break
 			case 'medium':
 				fontColor = alertWarning.on_surface.invert
 				backgroundColor = alertWarning.surface.medium
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertWarning.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertWarning.surface.medium}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertWarning.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertWarning.surface.medium}`
 				}
 				break
 			case 'low':
 				fontColor = alertWarning.on_surface.invert
 				backgroundColor = alertWarning.surface.low
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverInvertState.color), convertPercentageToDecimal(hoverInvertState.opacity))}, ${
-						alertWarning.surface.low
-					}`
+					backgroundColor = `${createLinearGradient(hoverInvertState)}, ${alertWarning.surface.low}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusInvertState.color), convertPercentageToDecimal(focusInvertState.opacity))}, ${
-						alertWarning.surface.low
-					}`
+					backgroundColor = `${createLinearGradient(focusInvertState)}, ${alertWarning.surface.low}`
 				}
 				break
 			case 'lowest':
@@ -339,20 +261,16 @@ export function generateColorStyles(
 				backgroundColor = alertWarning.surface.lowest
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertWarning.surface.lowest
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertWarning.surface.lowest}`
 				}
 				if (active) {
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertWarning.surface.lowest
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertWarning.surface.lowest}`
 				}
 				break
 			case 'outline':
 				fontColor = alertWarning.on_surface.variant
 				backgroundColor = alertWarning.surface.outline
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
@@ -360,16 +278,12 @@ export function generateColorStyles(
 					outline = `1px solid ${theme.palette.custom_palette.orange.outline.low}`
 					outlineOffset = '-1px'
 
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertWarning.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertWarning.surface.outline}`
 				}
 				if (active) {
 					outline = `1px solid ${theme.palette.custom_palette.orange.outline.low}`
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertWarning.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertWarning.surface.outline}`
 				}
 
 				break
@@ -381,64 +295,52 @@ export function generateColorStyles(
 			case 'high':
 				fontColor = alertSuccess.on_surface.normal
 				backgroundColor = alertSuccess.surface.high
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertSuccess.surface.high
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertSuccess.surface.high}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertSuccess.surface.high
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertSuccess.surface.high}`
 				}
 
 				break
 			case 'medium':
 				fontColor = alertSuccess.on_surface.invert
 				backgroundColor = alertSuccess.surface.medium
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertSuccess.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertSuccess.surface.medium}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertSuccess.surface.medium
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertSuccess.surface.medium}`
 				}
 				break
 			case 'low':
 				fontColor = alertSuccess.on_surface.invert
 				backgroundColor = alertSuccess.surface.low
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertSuccess.surface.low
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertSuccess.surface.low}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertSuccess.surface.low
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertSuccess.surface.low}`
 				}
 				break
 			case 'lowest':
@@ -446,35 +348,27 @@ export function generateColorStyles(
 				backgroundColor = alertSuccess.surface.lowest
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertSuccess.surface.lowest
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertSuccess.surface.lowest}`
 				}
 				if (active) {
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertSuccess.surface.lowest
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertSuccess.surface.lowest}`
 				}
 				break
 			case 'outline':
 				fontColor = alertSuccess.on_surface.variant
 				backgroundColor = alertSuccess.surface.outline
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
 					outline = `1px solid ${theme.palette.custom_palette.lime.medium.normal}`
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						alertSuccess.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${alertSuccess.surface.outline}`
 				}
 				if (active) {
 					outline = `1px solid ${theme.palette.custom_palette.lime.medium.normal}`
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						alertSuccess.surface.outline
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${alertSuccess.surface.outline}`
 				}
 
 				break
@@ -487,21 +381,17 @@ export function generateColorStyles(
 			case 'high':
 				fontColor = customPalette.on_surface[customColor as customColor].low
 				backgroundColor = customPalette[customColor as customColor].low.normal
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						customPalette[customColor as customColor].low.normal
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${customPalette[customColor as customColor].low.normal}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						customPalette[customColor as customColor].low.normal
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${customPalette[customColor as customColor].low.normal}`
 				}
 
 				break
@@ -509,83 +399,63 @@ export function generateColorStyles(
 				fontColor = customPalette.on_surface[customColor as customColor].high
 				backgroundColor = customPalette[customColor as customColor].low['50%']
 				console.log('backgroundColor', backgroundColor)
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						customPalette[customColor as customColor].low['50%']
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${customPalette[customColor as customColor].low['50%']}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						customPalette[customColor as customColor].low['50%']
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${customPalette[customColor as customColor].low['50%']}`
 				}
 				break
 			case 'low':
 				fontColor = customPalette.on_surface[customColor as customColor].high
 				backgroundColor = customPalette[customColor as customColor].low['30%']
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 
 				if (hover && !active) {
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(hexToRgb(hoverState.color), convertPercentageToDecimal(hoverState.opacity))}, ${
-						customPalette[customColor as customColor].low['30%']
-					}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${customPalette[customColor as customColor].low['30%']}`
 				}
 				if (active) {
-					outline = `2px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+					outline = `2px solid ${outline30}`
 					outlineOffset = '-2px'
-					backgroundColor = `${createLinearGradient(hexToRgb(focusState.color), convertPercentageToDecimal(focusState.opacity))}, ${
-						customPalette[customColor as customColor].low['30%']
-					}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${customPalette[customColor as customColor].low['30%']}`
 				}
 				break
 			case 'lowest':
 				fontColor = customPalette.on_surface[customColor as customColor].high
-				backgroundColor = createBackgroundWithOpacity(surfaceLowest.color, surfaceLowest.opacity)
+				backgroundColor = surfaceLowest
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
-					backgroundColor = `${createLinearGradient(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity)
-					)}, ${createBackgroundWithOpacity(surfaceLowest.color, surfaceLowest.opacity)}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${surfaceLowest}`
 				}
 				if (active) {
-					backgroundColor = `${createLinearGradient(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity)
-					)}, ${createBackgroundWithOpacity(surfaceLowest.color, surfaceLowest.opacity)}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${surfaceLowest}`
 				}
 				break
 			case 'outline':
 				fontColor = customPalette.on_surface[customColor as customColor].high
-				backgroundColor = createBackgroundWithOpacity(surfaceLowest.color, surfaceLowest.color)
-				outline = `1px solid ${createBackgroundWithOpacity(outline30.color, outline30.opacity)}`
+				backgroundColor = surfaceLowest
+				outline = `1px solid ${outline30}`
 				outlineOffset = '0px'
 				backdropFilter = 'blur(25px)'
 				if (hover && !active) {
 					outline = `1px solid ${customPalette[customColor as customColor].outline}`
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(
-						hexToRgb(hoverState.color),
-						convertPercentageToDecimal(hoverState.opacity)
-					)}, ${createBackgroundWithOpacity(theme.palette.main.surface_outline.color, theme.palette.main.surface_outline.color)}`
+					backgroundColor = `${createLinearGradient(hoverState)}, ${theme.palette.main.surface_outline}`
 				}
 				if (active) {
 					outline = `1px solid ${customPalette[customColor as customColor].outline}`
 					outlineOffset = '-1px'
-					backgroundColor = `${createLinearGradient(
-						hexToRgb(focusState.color),
-						convertPercentageToDecimal(focusState.opacity)
-					)}, ${createBackgroundWithOpacity(theme.palette.main.surface_outline.color, theme.palette.main.surface_outline.color)}`
+					backgroundColor = `${createLinearGradient(focusState)}, ${theme.palette.main.surface_outline}`
 				}
 
 				break

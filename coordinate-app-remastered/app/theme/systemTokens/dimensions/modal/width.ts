@@ -1,11 +1,5 @@
-// material-ui
-
 import { dimensions } from '@theme/referenceTokens/dimensions'
 import { ModalWidth } from '@theme/types/theme'
-
-// types
-
-// ==============================|| DEFAULT THEME - CUSTOM SHADOWS  ||============================== //
 
 const ModalsWidth = (): ModalWidth => {
 	return {

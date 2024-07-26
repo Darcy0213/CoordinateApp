@@ -20,47 +20,34 @@ export interface PalettesProps {
 	[key: string]: string[]
 }
 export type ColorStatesProps = {
-	hover: { color: string; opacity: string }
-	hoverValues: { color: string; opacity: string }
-	focus: { color: string; opacity: string }
-	press: { color: string; opacity: string }
-	drag: { color: string; opacity: string }
-	focus_outline: string
-	selected_blue: { color: string; opacity: string }
-	clear: { color: string; opacity: string }
-	disable_surface: string
-	disable_on_surface: string
-	hover_invert: { color: string; opacity: string }
-	focus_invert: { color: string; opacity: string }
+	hover: string
+	hover_invert: string
+	active: string
+	focus: string
+	row_selected: string
+	drag: string
+	disabled: string
 }
 
 export type SurfaceColorsProps = {
-	container_lowest: string
-	container_low: string
-	container_opacity: { color: string; opacity: string }
-	container: { normal: string; opacity: Opacity }
-	container_high: string
-	container_highest: string
-	container_medium: string
-	on_surface: string
-	on_surface_medium: string
-	on_surface_invert: string
-	on_surface_variant: string
-	on_surface_soft: string
-	container_invert: string
-	on_surface_container_invert: string
+	lowest: string
+	low: string
+	medium: string
+	high: string
+	highest: string
+	container: string
 }
 
 export type MainColorsProps = {
 	surface_high: string
-	surface_medium: { color: string; opacity: string }
-	surface_low: { color: string; opacity: string }
-	surface_lowest: { color: string; opacity: string }
-	surface_outline: { color: string; opacity: string }
+	surface_medium: string
+	surface_low: string
+	surface_lowest: string
+	surface_outline: string
 	on_surface: string
 	on_surface_invert: string
 	on_surface_medium: string
-	outline: { color: string; opacity: string }
+	outline: string
 }
 
 export type Opacity = {
@@ -167,7 +154,7 @@ export type OutlineColorsProps = {
 	variant: string
 	high: string
 	soft: string
-	opacity_30: { color: string; opacity: string }
+	opacity_30: string
 	magenta: string
 	cyan: string
 	yellow: string

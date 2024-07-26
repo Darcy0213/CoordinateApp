@@ -20,19 +20,15 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			200: sys_blue['blue-200'],
 			300: sys_blue['blue-300'],
 			400: sys_blue['blue-400'],
-			'400-30%': sys_blue['blue-400-30%'],
-			'400-50%': sys_blue['blue-400-50%'],
+
 			50: sys_blue['blue-50'],
 			500: sys_blue['blue-500'],
-			'500-30%': sys_blue['blue-500-30%'],
-			'500-50%': sys_blue['blue-500-50%'],
+
 			600: sys_blue['blue-600'],
 			700: sys_blue['blue-700'],
-			'700-30%': sys_blue['blue-700-30%'],
-			'700-50%': sys_blue['blue-700-50%'],
+
 			800: sys_blue['blue-800'],
-			'800-30%': sys_blue['blue-800-30%'],
-			'800-50%': sys_blue['blue-800-50%'],
+
 			900: sys_blue['blue-900']
 		},
 		cyan: {
@@ -42,15 +38,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_cyan['cyan-400'],
 			50: sys_cyan['cyan-50'],
 			500: sys_cyan['cyan-500'],
-			'500-30%': sys_cyan['cyan-500-30%'],
-			'500-50%': sys_cyan['cyan-500-50%'],
+
 			600: sys_cyan['cyan-600'],
 			700: sys_cyan['cyan-700'],
-			'700-30%': sys_cyan['cyan-700-30%'],
-			'700-50%': sys_cyan['cyan-700-50%'],
+
 			800: sys_cyan['cyan-800'],
-			'800-30%': sys_cyan['cyan-800-30%'],
-			'800-50%': sys_cyan['cyan-800-50%'],
+
 			900: sys_cyan['cyan-900']
 		},
 		sys_gray: {
@@ -61,7 +54,7 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_gray['gray-400'],
 			50: sys_gray['gray-50'],
 			25: sys_gray['gray-25'],
-			35: sys_gray['gray-35'],
+
 			75: sys_gray['gray-75'],
 			80: sys_gray['gray-80'],
 			500: sys_gray['gray-500'],
@@ -69,7 +62,7 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			700: sys_gray['gray-700'],
 			800: sys_gray['gray-800'],
 			900: sys_gray['gray-900'],
-			950: sys_gray['gray-950'],
+
 			1000: sys_gray['gray-1000']
 		},
 		green: {
@@ -79,15 +72,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_green['green-400'],
 			50: sys_green['green-50'],
 			500: sys_green['green-500'],
-			'500-30%': sys_green['green-500-30%'],
-			'500-50%': sys_green['green-500-50%'],
+
 			600: sys_green['green-600'],
 			700: sys_green['green-700'],
-			'700-30%': sys_green['green-700-30%'],
-			'700-50%': sys_green['green-700-50%'],
+
 			800: sys_green['green-800'],
-			'800-30%': sys_green['green-800-30%'],
-			'800-50%': sys_green['green-800-50%'],
+
 			900: sys_green['green-900']
 		},
 		lime: {
@@ -97,15 +87,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_lime['lime-400'],
 			50: sys_lime['lime-50'],
 			500: sys_lime['lime-500'],
-			'500-30%': sys_lime['lime-500-30%'],
-			'500-50%': sys_lime['lime-500-50%'],
+
 			600: sys_lime['lime-600'],
 			700: sys_lime['lime-700'],
-			'700-30%': sys_lime['lime-700-30%'],
-			'700-50%': sys_lime['lime-700-50%'],
+
 			800: sys_lime['lime-800'],
-			'800-30%': sys_lime['lime-800-30%'],
-			'800-50%': sys_lime['lime-800-50%'],
+
 			900: sys_lime['lime-900']
 		},
 		magenta: {
@@ -115,15 +102,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_magenta['magenta-400'],
 			50: sys_magenta['magenta-50'],
 			500: sys_magenta['magenta-500'],
-			'500-30%': sys_magenta['magenta-500-30%'],
-			'500-50%': sys_magenta['magenta-500-50%'],
+
 			600: sys_magenta['magenta-600'],
 			700: sys_magenta['magenta-700'],
-			'700-30%': sys_magenta['magenta-700-30%'],
-			'700-50%': sys_magenta['magenta-700-50%'],
+
 			800: sys_magenta['magenta-800'],
-			'800-30%': sys_magenta['magenta-800-30%'],
-			'800-50%': sys_magenta['magenta-800-50%'],
+
 			900: sys_magenta['magenta-900']
 		},
 		orange: {
@@ -133,15 +117,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_orange['orange-400'],
 			50: sys_orange['orange-50'],
 			500: sys_orange['orange-500'],
-			'500-30%': sys_orange['orange-500-30%'],
-			'500-50%': sys_orange['orange-500-50%'],
+
 			600: sys_orange['orange-600'],
 			700: sys_orange['orange-700'],
-			'700-30%': sys_orange['orange-700-30%'],
-			'700-50%': sys_orange['orange-700-50%'],
+
 			800: sys_orange['orange-800'],
-			'800-30%': sys_orange['orange-800-30%'],
-			'800-50%': sys_orange['orange-800-50%'],
+
 			900: sys_orange['orange-900']
 		},
 		purple: {
@@ -151,15 +132,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_purple['purple-400'],
 			50: sys_purple['purple-50'],
 			500: sys_purple['purple-500'],
-			'500-30%': sys_purple['purple-500-30%'],
-			'500-50%': sys_purple['purple-500-50%'],
+
 			600: sys_purple['purple-600'],
 			700: sys_purple['purple-700'],
-			'700-30%': sys_purple['purple-700-30%'],
-			'700-50%': sys_purple['purple-700-50%'],
+
 			800: sys_purple['purple-800'],
-			'800-30%': sys_purple['purple-800-30%'],
-			'800-50%': sys_purple['purple-800-50%'],
+
 			900: sys_purple['purple-900']
 		},
 		red: {
@@ -169,15 +147,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_red['red-400'],
 			50: sys_red['red-50'],
 			500: sys_red['red-500'],
-			'500-30%': sys_red['red-500-30%'],
-			'500-50%': sys_red['red-500-50%'],
+
 			600: sys_red['red-600'],
 			700: sys_red['red-700'],
-			'700-30%': sys_red['red-700-30%'],
-			'700-50%': sys_red['red-700-50%'],
+
 			800: sys_red['red-800'],
-			'800-30%': sys_red['red-800-30%'],
-			'800-50%': sys_red['red-800-50%'],
+
 			900: sys_red['red-900']
 		},
 		yellow: {
@@ -187,15 +162,12 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_yellow['yellow-400'],
 			50: sys_yellow['yellow-50'],
 			500: sys_yellow['yellow-500'],
-			'500-30%': sys_yellow['yellow-500-30%'],
-			'500-50%': sys_yellow['yellow-500-50%'],
+
 			600: sys_yellow['yellow-600'],
 			700: sys_yellow['yellow-700'],
-			'700-30%': sys_yellow['yellow-700-30%'],
-			'700-50%': sys_yellow['yellow-700-50%'],
+
 			800: sys_yellow['yellow-800'],
-			'800-30%': sys_yellow['yellow-800-30%'],
-			'800-50%': sys_yellow['yellow-800-50%'],
+
 			900: sys_yellow['yellow-900']
 		}
 	}

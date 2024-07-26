@@ -11,7 +11,7 @@ export default function CoordinateHome() {
 	return (
 		<CoorButton
 			label="Volver al inicio"
-			size="h4"
+			size="xl"
 			color="success"
 			intensity="low"
 			iconPosition="end"

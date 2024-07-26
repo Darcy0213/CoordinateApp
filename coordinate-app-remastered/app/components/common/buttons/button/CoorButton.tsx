@@ -1,10 +1,10 @@
 'use client'
 
 import { IconGenerator } from '@common/icons'
-import { Typography } from '@mui/material'
+import { Typography, TypographyOwnProps } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { useEffect, useState } from 'react'
-import { color, customColor, intensity } from '../types'
+import { ButtonStyle, color, customColor, intensity } from '../types'
 import CoorButtonStyled from './CoorButtonStyled'
 import { size } from './types'
 import { calculateButtonStyle } from './utils'
@@ -23,6 +23,7 @@ interface CoorButtonProps {
 	fullWidth?: boolean
 	disabled?: boolean
 }
+
 const CoorButton = ({
 	label,
 	size,
@@ -38,20 +39,20 @@ const CoorButton = ({
 	customColor
 }: CoorButtonProps) => {
 	const theme = useTheme()
-	// Extract spacing and dimension values from the theme
-	const spacingButton = theme.dimensions.element.spacing
-	const elementDimension = theme.dimensions.element
+	// Extract  dimension values from the theme
+	const iconDimension = theme.dimensions.icon
 	// State for managing hover effect
 	const [hover, setHover] = useState(forceHover ? forceHover : false)
 	// State for dynamic button styles calculated based on props
-	const [buttonStyle, setButtonStyle] = useState({
-		fontColor: theme.palette.surface.on_surface_invert,
+	const [buttonStyle, setButtonStyle] = useState<ButtonStyle>({
+		fontColor: theme.palette.surface.container,
 		backgroundColor: '',
 		paddingButton: '',
 		backdropFilter: '',
 		outline: '',
 		outlineOffset: '',
-		borderRadius: ''
+		borderRadius: '',
+		spacingButton: ''
 	})
 	// Effect hook to update button styles based on dependencies based on hover, active, theme changes
 	useEffect(() => {
@@ -60,13 +61,32 @@ const CoorButton = ({
 	}, [hover, active, theme, color, intensity, size, disabled, customColor])
 	// Render the styled button with conditional props for icon positioning
 
+	let typographyVariant: string = 'sys.typo.st1_semibold'
+
+	switch (size) {
+		case 'xl':
+			typographyVariant = 'sys.typo.h4'
+			break
+		case 'lg':
+			typographyVariant = 'sys.typo.t1'
+			break
+		case 'md':
+			typographyVariant = 'sys.typo.st1_semibold'
+			break
+		case 'xs':
+			typographyVariant = 'sys.typo.st3'
+			break
+		default:
+			typographyVariant = 'sys.typo.st1_semibold'
+	}
+
 	return (
 		<CoorButtonStyled
 			disableTouchRipple
 			disableFocusRipple
 			disableRipple
 			onClick={onClick}
-			spacing={spacingButton[size]}
+			spacing={buttonStyle.spacingButton as string}
 			padding={buttonStyle.paddingButton}
 			backdropFilter={buttonStyle.backdropFilter}
 			outline={buttonStyle.outline}
@@ -85,9 +105,9 @@ const CoorButton = ({
 					startIcon: (
 						<IconGenerator
 							iconName={iconName}
-							widthToken={elementDimension.width[size]}
-							heightToken={elementDimension.height[size]}
-							colorToken={disabled ? theme.palette.state.disable_on_surface : buttonStyle.fontColor}
+							widthToken={iconDimension.width[size] as string}
+							heightToken={iconDimension.height[size] as string}
+							colorToken={disabled ? theme.palette.state.disabled : buttonStyle.fontColor}
 						/>
 					)
 				})}
@@ -97,16 +117,16 @@ const CoorButton = ({
 					endIcon: (
 						<IconGenerator
 							iconName={iconName}
-							widthToken={elementDimension.width[size]}
-							heightToken={elementDimension.height[size]}
-							colorToken={disabled ? theme.palette.state.disable_on_surface : buttonStyle.fontColor}
+							widthToken={iconDimension.width[size] as string}
+							heightToken={iconDimension.height[size] as string}
+							colorToken={disabled ? theme.palette.state.disabled : buttonStyle.fontColor}
 						/>
 					)
 				})}
 		>
 			<Typography
 				sx={{ fontWeight: '400' }}
-				variant={size !== 'st1' ? `sys.typo.${size}` : 'sys.typo.st1_semibold'}
+				variant={typographyVariant as TypographyOwnProps['variant']}
 			>
 				{label}
 			</Typography>

@@ -55,7 +55,7 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
 			dimensions: {
 				common: {
 					padding: Dimensions.themeCommonPadding,
-					paddingNonSide: Dimensions.themeCommonPaddingNonSide,
+					padding_non_side: Dimensions.themeCommonPaddingNonSide,
 					spacing: Dimensions.themeCommonSpacing,
 					height: Dimensions.themeCommonHeight,
 					width: Dimensions.themeCommonWidth
@@ -74,7 +74,7 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
 				},
 				page: {
 					padding: Dimensions.themePagePadding,
-					width: Dimensions.themePageWidth,
+
 					spacing: Dimensions.themePageSpacing
 				},
 				screen: {
@@ -105,7 +105,7 @@ export default function ThemeCustomization({ children }: ThemeCustomizationProps
 				buttonChip: {
 					padding: Dimensions.themeButtonChipPadding,
 					spacing: Dimensions.themeButtonChipSpacing,
-					paddingNonSide: Dimensions.themeButtonChipPaddingNonSide
+					padding_non_side: Dimensions.themeButtonChipPaddingNonSide
 				},
 				icon: {
 					width: Dimensions.themeIconWidth,

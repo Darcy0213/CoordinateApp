@@ -1,11 +1,7 @@
 // material-ui
 
-import { ModalHeight } from '@mui/material'
 import { dimensions } from '@theme/referenceTokens/dimensions'
-
-// types
-
-// ==============================|| DEFAULT THEME - CUSTOM SHADOWS  ||============================== //
+import { ModalHeight } from '@theme/types/theme'
 
 const ModalsHeight = (): ModalHeight => {
 	return {

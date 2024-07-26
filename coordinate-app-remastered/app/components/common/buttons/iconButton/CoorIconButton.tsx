@@ -32,9 +32,9 @@ const CoorIconButton = ({
 }: CoorButtonProps) => {
 	const theme = useTheme() // Use Material-UI theme
 
-	// Extract button spacing and dimensions from theme
-	const spacingButton = theme.dimensions.element.spacing
-	const dimensions = theme.dimensions.element
+	// Extract button dimensions from theme
+
+	const iconDimensions = theme.dimensions.icon
 
 	// State to manage hover effect
 	const [hover, setHover] = useState(forceHover ? forceHover : false)
@@ -60,7 +60,6 @@ const CoorIconButton = ({
 	return (
 		<CoorIconButtonStyled
 			onClick={onClick}
-			spacing={spacingButton[size]}
 			padding={buttonStyle.paddingButton}
 			backdropFilter={buttonStyle.backdropFilter}
 			outline={buttonStyle.outline}
@@ -76,9 +75,9 @@ const CoorIconButton = ({
 			{iconName && (
 				<IconGenerator
 					iconName={iconName}
-					widthToken={dimensions.width[size]}
-					heightToken={dimensions.height[size]}
-					colorToken={disabled ? theme.palette.state.disable_on_surface : buttonStyle.fontColor}
+					widthToken={iconDimensions.width[size] as string}
+					heightToken={iconDimensions.height[size] as string}
+					colorToken={disabled ? theme.palette.state.disabled : buttonStyle.fontColor}
 					iconLibrary={iconLibrary}
 				/>
 			)}
