@@ -1,0 +1,5 @@
+export { default as CoorLargeChip } from './CoorLargeChip'
+export * from './examples'
+export * from './icon-chip'
+export * from './instance-chip'
+export * from './small-chip'
