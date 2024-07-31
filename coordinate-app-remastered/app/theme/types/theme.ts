@@ -22,6 +22,7 @@ export interface PalettesProps {
 export type ColorStatesProps = {
 	hover: string
 	hover_invert: string
+	active_surface: string
 	active: string
 	focus: string
 	row_selected: string
@@ -30,12 +31,20 @@ export type ColorStatesProps = {
 }
 
 export type SurfaceColorsProps = {
-	lowest: string
-	low: string
-	medium: string
-	high: string
-	highest: string
-	container: string
+	container_lowest: string
+	container_low: string
+	container_opacity: string
+	container: { normal: string; opacity: Opacity }
+	container_high: string
+	container_highest: string
+	container_medium: string
+	on_surface: string
+	on_surface_medium: string
+	on_surface_invert: string
+	on_surface_variant: string
+	on_surface_soft: string
+	container_invert: string
+	on_surface_container_invert: string
 }
 
 export type MainColorsProps = {
@@ -60,8 +69,8 @@ export type Opacity = {
 }
 
 export type OpacityCategories = {
-	invert: { color: string; opacity: string }
-	normal: { color: string; opacity: string }
+	invert: string
+	normal: string
 }
 
 export type BackgroundColorsProps = {

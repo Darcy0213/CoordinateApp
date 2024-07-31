@@ -19,7 +19,6 @@ declare module '@mui/material/styles' {
 	interface CoordinatePaletteColorOptions {
 		0?: string
 		25?: string
-		35?: string
 		75?: string
 		60?: string
 		80?: string
@@ -41,7 +40,6 @@ declare module '@mui/material/styles' {
 		'800-30%'?: string
 		'800-50%'?: string
 		900: string
-		950?: string
 		1000?: string
 	}
 

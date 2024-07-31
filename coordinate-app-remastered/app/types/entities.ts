@@ -1,0 +1,1 @@
+export type LocationEntities = 'object' | 'workspace' | 'type' | 'file_folder' | null
