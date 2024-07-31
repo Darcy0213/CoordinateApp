@@ -1,1 +1,1 @@
-export type size = 'md' | 'sm' | 'xs'
+export type instanceChipSize = 'md' | 'sm' | 'xs'

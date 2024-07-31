@@ -1,14 +1,15 @@
+'use client'
 import { Theme } from '@emotion/react'
 import { Box, SxProps, Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { useEffect, useState } from 'react'
 
-import CoorChipIcon from '../icon-chip/CoorIconChip'
+import { CoorIconChip } from '../icon-chip'
 import { color, contrast, style } from '../types'
-import { size } from './types'
+import { instanceChipSize } from './types'
 
 interface CoorInstanceChipProps {
-	size: size
+	size: instanceChipSize
 	color: color
 	contrast: contrast
 	variant: style
@@ -54,7 +55,7 @@ const CoorInstanceChip = ({
 				gap: theme.dimensions.buttonChip.spacing[size]
 			}}
 		>
-			<CoorChipIcon
+			<CoorIconChip
 				size={size}
 				color={color}
 				contrast={contrast}

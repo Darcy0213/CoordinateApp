@@ -1,12 +1,12 @@
 import { Theme } from '@mui/material/styles'
-import { ChipStyle, color, contrast, size, style } from './types'
+import { ChipStyle, color, contrast, largeChipSize, style } from './types'
 
 export function calculateChipStyle(
 	color: color,
 	contrast: contrast,
 	style: style,
 	theme: Theme,
-	size: size,
+	size: largeChipSize,
 	isIconOnly: boolean = false // Assuming false as default for backward compatibility
 ): ChipStyle {
 	// Generates the background color, font color, outline color, and outline offset based on theme and input parameters.

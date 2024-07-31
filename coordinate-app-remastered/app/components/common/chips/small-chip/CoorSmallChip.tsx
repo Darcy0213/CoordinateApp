@@ -1,3 +1,4 @@
+'use client'
 import { Typography, TypographyOwnProps } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import CoorSmallChipStyled from './CoorSmallChipStyled'

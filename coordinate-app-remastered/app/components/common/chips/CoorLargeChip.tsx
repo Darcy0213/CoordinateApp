@@ -1,14 +1,15 @@
+'use client'
 import { Typography, TypographyOwnProps } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 
 import { IconGenerator } from '@common/icons'
 import { useEffect, useState } from 'react'
 import CoorChipStyled from './CoorChipStyled'
-import { color, contrast, size, style } from './types'
+import { color, contrast, largeChipSize, style } from './types'
 import { calculateChipStyle } from './utils'
 
 interface CoorLargeChipProps {
-	size: size
+	size: largeChipSize
 	color: color
 	contrast: contrast
 	variant: style

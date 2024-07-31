@@ -1,3 +1,4 @@
+export * from './category-chip'
 export { default as CoorLargeChip } from './CoorLargeChip'
 export * from './examples'
 export * from './icon-chip'

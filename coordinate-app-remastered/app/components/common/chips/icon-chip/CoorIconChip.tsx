@@ -1,5 +1,5 @@
-import { IconGenerator } from '@common/icons'
-import { iconsForUsersArray } from '@common/icons/IconsForUsers'
+'use client'
+import { IconGenerator, iconsForUsersArray } from '@common/icons'
 import { Typography, TypographyOwnProps } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { findIconOrColorById } from '@utils/colorMethods'
