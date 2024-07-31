@@ -17,7 +17,8 @@ const StatesColors = (colors: PaletteThemeProps, mode: ThemeMode): ColorStatesPr
 		hover: darkMode ? opacityRT['8_dark'] : opacityRT['8_light'],
 		hover_invert: darkMode ? opacityRT['8_light'] : opacityRT['8_dark'],
 		active: darkMode ? gray[900] : gray[100],
-		focus: darkMode ? blue[900] : blue[100],
+		active_surface: darkMode ? opacityRT['16_dark'] : opacityRT['16_light'],
+		focus: darkMode ? gray[900] : gray[100],
 		row_selected: opacityRT['12_blue'],
 		drag: darkMode ? opacityRT['16_dark'] : opacityRT['16_light'],
 		disabled: darkMode ? gray[300] : gray[600]

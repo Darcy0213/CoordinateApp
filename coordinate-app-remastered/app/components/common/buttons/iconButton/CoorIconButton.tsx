@@ -1,3 +1,4 @@
+'use client'
 import IconGenerator from '@common/icons/IconGenerator'
 import { useTheme } from '@mui/material/styles'
 import { useEffect, useState } from 'react'

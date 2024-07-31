@@ -16,6 +16,7 @@ export function generateColorStyles(
 	const focusInvertState = theme.palette.state.focus
 	const hoverState = theme.palette.state.hover
 	const focusState = theme.palette.state.focus
+	const activeSurface = theme.palette.state.active_surface
 	// Initialize style properties with default values
 	let fontColor = ''
 	let backgroundColor = ''
@@ -79,11 +80,7 @@ export function generateColorStyles(
 					backgroundColor = createLinearGradientThirdColor(hoverState, surfaceColor.surface_low)
 				}
 				if (active) {
-					backgroundColor = createLinearGradientThirdColor(
-						focusState,
-
-						surfaceColor.surface_low
-					)
+					backgroundColor = createLinearGradientThirdColor(focusState, surfaceColor.surface_low)
 				}
 				break
 			case 'lowest':
@@ -94,7 +91,7 @@ export function generateColorStyles(
 					backgroundColor = createLinearGradientThirdColor(hoverState, surfaceColor.surface_lowest)
 				}
 				if (active) {
-					backgroundColor = createLinearGradientThirdColor(focusState, surfaceColor.surface_lowest)
+					backgroundColor = createLinearGradientThirdColor(activeSurface, surfaceColor.surface_lowest)
 				}
 				break
 			case 'outline':

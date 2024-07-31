@@ -54,7 +54,6 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			400: sys_gray['gray-400'],
 			50: sys_gray['gray-50'],
 			25: sys_gray['gray-25'],
-
 			75: sys_gray['gray-75'],
 			80: sys_gray['gray-80'],
 			500: sys_gray['gray-500'],
@@ -62,7 +61,6 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			700: sys_gray['gray-700'],
 			800: sys_gray['gray-800'],
 			900: sys_gray['gray-900'],
-
 			1000: sys_gray['gray-1000']
 		},
 		green: {
