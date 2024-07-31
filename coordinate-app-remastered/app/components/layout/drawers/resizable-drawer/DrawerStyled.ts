@@ -12,13 +12,16 @@ const ResizableDrawerStyled = styled(Drawer, { shouldForwardProp: (prop) => prop
 	({ theme, drawerWidth }: Props) => css`
 		flex-shrink: 0;
 		width: ${drawerWidth}px;
+		box-shadow: ${theme.effects.elevation[1].boxShadow};
+		backdrop-filter: ${theme.effects.elevation[1].backdropFilter};
+		border-radius: ${theme.dimensions.radius['2xl']};
 		& .MuiDrawer-paper {
 			position: relative;
 			background: #fcfbff;
 			width: ${drawerWidth}px;
 			box-sizing: border-box;
-
-			box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.15), 0px 1px 1.5px 0.5px rgba(0, 0, 0, 0.07);
+			border-radius: ${theme.dimensions.radius['2xl']};
+			background: ${theme.palette.surface.container_medium};
 		}
 	`
 )
