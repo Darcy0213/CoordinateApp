@@ -1,4 +1,4 @@
-import CommonLayout from '@components/layout/CommonLayout'
+import { CommonLayout } from '@components/layout'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

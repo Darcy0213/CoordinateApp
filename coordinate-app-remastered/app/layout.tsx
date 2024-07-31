@@ -3,6 +3,7 @@ import '@blocknote/mantine/style.css'
 import MuiXLicense from '@components/MuiXLicense'
 import { AuthProvider } from '@context/AuthContext'
 import { ConfigProvider } from '@context/ConfigContext'
+import RecoilProvider from '@context/RecoilProvider'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter'
 
 import ThemeCustomization from '@theme/theme'
@@ -29,8 +30,10 @@ export default function RootLayout({
 					<ConfigProvider>
 						<ThemeCustomization>
 							<AuthProvider>
-								<MuiXLicense />
-								{children}
+								<RecoilProvider>
+									<MuiXLicense />
+									{children}
+								</RecoilProvider>
 							</AuthProvider>
 						</ThemeCustomization>
 					</ConfigProvider>

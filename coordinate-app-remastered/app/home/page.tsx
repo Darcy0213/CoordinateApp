@@ -1,6 +1,6 @@
 'use client'
 
-import { CoorButton } from '@common/buttons/button'
+import { CoorButton } from '@common/buttons'
 import { useRouter } from 'next/navigation'
 
 export default function CoordinateHome() {

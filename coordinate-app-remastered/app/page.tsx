@@ -1,7 +1,6 @@
 'use client'
 
-import { ButtonsExamples, CoorButton, IconButtonsExamples } from '@common/buttons'
-import { ChipsExamples } from '@common/chips'
+import { CoorButton } from '@common/buttons'
 import { useAuth } from '@context/AuthContext'
 import { Box } from '@mui/material'
 import { useRouter } from 'next/navigation'
@@ -35,9 +34,6 @@ export default function Home() {
 					iconName="help"
 					onClick={() => logout(router)}
 				/>
-				<ChipsExamples />
-				<IconButtonsExamples />
-				<ButtonsExamples />
 			</Box>
 		</main>
 	)
