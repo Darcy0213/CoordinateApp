@@ -20,7 +20,8 @@ const AuthForm = ({ mode }: AuthFormProps) => {
 		e.preventDefault()
 		if (mode === 'login') {
 			await login(email, password)
-			router.push('/')
+
+			router.push('/home')
 		} else if (mode === 'register') {
 			await register(email, password, firstName, lastName, organizationName)
 			router.push('/login')

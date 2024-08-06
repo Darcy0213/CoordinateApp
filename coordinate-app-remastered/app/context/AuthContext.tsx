@@ -1,7 +1,6 @@
 'use client'
 import ApiAxios from '@api/ApiAxios'
 import { AuthContextType, JwtPayload, loggedUser } from '@globalTypes/index'
-
 import { isTokenValid } from '@utils/auth'
 import Cookies from 'js-cookie'
 import { jwtDecode } from 'jwt-decode'
@@ -56,11 +55,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
 	// Logout function
 	const logout = (router: AppRouterInstance) => {
-		Cookies.remove('token')
-		localStorage.removeItem('userPreferences')
 		setUser(null)
 		setIsLoggedIn(false)
 		router.push('/login')
+		Cookies.remove('token')
+		localStorage.removeItem('userPreferences')
 	}
 
 	// Register function

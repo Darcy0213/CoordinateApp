@@ -1,4 +1,3 @@
-import { CommonLayout } from '@components/layout'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -11,5 +10,5 @@ export default function Layout({
 }: Readonly<{
 	children: React.ReactNode
 }>) {
-	return <CommonLayout>{children}</CommonLayout>
+	return children
 }

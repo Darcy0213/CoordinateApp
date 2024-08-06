@@ -34,6 +34,7 @@
     "react-dom": "^18",
     "react-emoji-picker": "^1.0.13",
     "react-mentions": "^4.4.10",
+    "react-query": "^3.39.3",
     "recoil": "^0.7.7",
     "simplebar-react": "^3.2.6"
   },

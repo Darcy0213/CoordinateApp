@@ -1,7 +1,6 @@
 import { isTokenValid } from '@utils/auth'
 import axios, { AxiosRequestConfig } from 'axios'
 import Cookies from 'js-cookie'
-import Router from 'next/router'
 import { apiUrl } from './Config/Environments'
 
 interface ApiParams {
@@ -34,8 +33,9 @@ apiInstance.interceptors.response.use(
 	(response) => response,
 	(error) => {
 		if (error.response.status === 401) {
-			Cookies.remove('token')
-			Router.push('/login')
+			console.log('***unauthorized, logging out ...')
+			/* Cookies.remove('token')
+			Router.push('/login') */
 		}
 		return Promise.reject(error)
 	}
@@ -43,10 +43,12 @@ apiInstance.interceptors.response.use(
 
 class ApiAxios {
 	private static getHeaders() {
+		const token = Cookies.get('token') // Ensure the token comes from Cookies for consistency
+
 		return {
 			Accept: 'application/json',
 			'Content-Type': 'application/json',
-			Authorization: `${localStorage.getItem('serviceToken')}`
+			Authorization: token ? `${token}` : ''
 		}
 	}
 

@@ -45,7 +45,7 @@ const CoorButton = ({
 	const [hover, setHover] = useState(forceHover ? forceHover : false)
 	// State for dynamic button styles calculated based on props
 	const [buttonStyle, setButtonStyle] = useState<ButtonStyle>({
-		fontColor: theme.palette.surface.container,
+		fontColor: theme.palette.surface.container.normal,
 		backgroundColor: '',
 		paddingButton: '',
 		backdropFilter: '',

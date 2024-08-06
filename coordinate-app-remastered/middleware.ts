@@ -6,6 +6,7 @@ export function middleware(request: NextRequest) {
 	//Const to get the token from the cookies
 	const token = request.cookies.get('token')?.value
 
+	const protectedPaths = ['/home']
 	const publicPaths = ['/login', '/register']
 
 	//If there is no token and the path is not public, redirect to login
@@ -14,7 +15,7 @@ export function middleware(request: NextRequest) {
 	}
 
 	//If there is a token, verify if it is valid
-	if (token) {
+	if (token && protectedPaths.includes(request.nextUrl.pathname)) {
 		try {
 			const decoded: { exp: number } = jwtDecode(token)
 			//If the token is expired, redirect to login
@@ -30,5 +31,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-	matcher: ['/', '/home'] // Matches all paths
+	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 }
