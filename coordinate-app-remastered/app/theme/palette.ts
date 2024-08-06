@@ -4,6 +4,7 @@ import {
 	ChipColorsProps,
 	ColorStatesProps,
 	CustomPaletteProps,
+	CustomProps,
 	MainColorsProps,
 	OutlineColorsProps,
 	PaletteThemeProps,
@@ -18,6 +19,7 @@ import {
 	AlertColors,
 	BackgroundColors,
 	ChipColors,
+	CustomColors,
 	CustomPaletteColors,
 	MainColors,
 	OutlineColors,
@@ -45,6 +47,7 @@ const Palette = (mode: ThemeMode, presetColor: PresetColor) => {
 	const themeColorOutline: OutlineColorsProps = OutlineColors(paletteColor, mode)
 	const themeColorCustomPalette: CustomPaletteProps = CustomPaletteColors(paletteColor, mode)
 	const themeColorMainPalette: MainColorsProps = MainColors(paletteColor, mode)
+	const themeColorProps: CustomProps = CustomColors(paletteColor, mode)
 
 	return createTheme({
 		palette: {
@@ -59,7 +62,8 @@ const Palette = (mode: ThemeMode, presetColor: PresetColor) => {
 			sys_tertiary: themeColorTertiary,
 			outline: themeColorOutline,
 			custom_palette: themeColorCustomPalette,
-			main: themeColorMainPalette
+			main: themeColorMainPalette,
+			custom: themeColorProps
 		}
 	})
 }

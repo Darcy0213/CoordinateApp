@@ -7,6 +7,7 @@ import {
 	ChipColorsProps,
 	ColorStatesProps,
 	CustomPaletteProps,
+	CustomProps,
 	MainColorsProps,
 	OutlineColorsProps,
 	PrimaryColorsProps,
@@ -120,5 +121,6 @@ declare module '@mui/material/styles' {
 		outline: OutlineColorsProps
 		custom_palette: CustomPaletteProps
 		main: MainColorsProps
+		custom: CustomProps
 	}
 }

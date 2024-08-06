@@ -114,10 +114,14 @@ export type ChipColorsProps = {
 
 type IntensityTypes = {
 	high: string
+	highest?: string
 	medium: string
 	low: string
 	lowest: string
-	outline: string
+	outline?: string
+	preview?: string
+	container?: string
+	variant?: string
 }
 
 type OnSurfaceTypes = {
@@ -142,6 +146,10 @@ export type PrimaryColorsProps = {
 	on_primary: string
 	container: string
 	on_primary_container: string
+	background: IntensityTypes
+	surface: IntensityTypes
+	on_surface: { default: string; variant: string; low: string; invert: string }
+	outline: IntensityTypes
 }
 
 export type SecondaryColorsProps = {
@@ -173,6 +181,23 @@ export type OutlineColorsProps = {
 	red: string
 	purple: string
 	blue: string
+}
+
+export type CustomProps = {
+	blue: CustomPaletteLevels
+	cyan: CustomPaletteLevels
+	green: CustomPaletteLevels
+	lime: CustomPaletteLevels
+	yellow: CustomPaletteLevels
+	orange: CustomPaletteLevels
+	red: CustomPaletteLevels
+	magenta: CustomPaletteLevels
+	purple: CustomPaletteLevels
+	gray: CustomPaletteLevels
+	on_surface: {
+		default: string
+		invert: string
+	}
 }
 
 export type CustomPaletteProps = {
@@ -350,4 +375,14 @@ export interface CustomEffects {
 	blur: { 1: string; 2: string; 3: string; 4: string }
 	elevation: { 1: Elevation; 2: Elevation }
 	shadow: { modal: string; card: string }
+}
+
+type CustomPaletteLevels = {
+	1: string
+	2: string
+	3: string
+	4: string
+	5: string
+	6: string
+	7: string
 }

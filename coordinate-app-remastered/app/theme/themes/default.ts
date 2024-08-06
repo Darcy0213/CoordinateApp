@@ -83,6 +83,7 @@ const Default = (mode: ThemeMode): PaletteThemeProps => {
 			200: sys_lime['lime-200'],
 			300: sys_lime['lime-300'],
 			400: sys_lime['lime-400'],
+
 			50: sys_lime['lime-50'],
 			500: sys_lime['lime-500'],
 
