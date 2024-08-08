@@ -57,9 +57,9 @@ const NotificationsButton = ({ isActive, name, theme, onClick, disabled }: Props
 			>
 				<IconGenerator
 					iconName={isActive ? 'notificationFilled' : 'notificationOutlined'}
-					widthToken={icon.width['2xl'] as string}
-					heightToken={icon.height['2xl'] as string}
-					colorToken={isActive ? theme.palette.surface.on_surface : theme.palette.surface.on_surface_variant}
+					widthToken={icon.width['xl'] as string}
+					heightToken={icon.height['xl'] as string}
+					colorToken={isActive ? theme.palette.sys_primary.on_surface.default : theme.palette.sys_primary.on_surface.variant}
 				/>
 			</Badge>
 		</TabButtonStyled>

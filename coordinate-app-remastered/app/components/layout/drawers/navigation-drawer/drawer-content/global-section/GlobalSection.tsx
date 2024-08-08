@@ -38,15 +38,16 @@ const GlobalSection = ({ theme, setLocalTab, globalTabSelected, setActiveGlobalT
 			flexDirection={'column'}
 			width={'fit-content'}
 			justifyContent={'space-between'}
-			padding={theme.dimensions.common.padding.md}
-			borderRadius={'8px 0px 0px 8px'}
-			sx={{ backgroundColor: 'rgba(19, 19, 24, 0.02)' }}
+			paddingLeft={theme.dimensions.drawer.padding.xs}
+			paddingY={theme.dimensions.drawer.padding.xs}
 		>
 			<Box
 				className="global_elements"
 				display={'flex'}
 				flexDirection={'column'}
-				gap={'4px'}
+				gap={theme.dimensions.drawer.spacing.xs}
+				alignItems={'center'}
+				width={'fit-content'}
 			>
 				{globalElements.map((element) =>
 					element.name === 'Notifications' ? (
@@ -104,7 +105,9 @@ const GlobalSection = ({ theme, setLocalTab, globalTabSelected, setActiveGlobalT
 				className="configuration_elements"
 				display={'flex'}
 				flexDirection={'column'}
-				gap={'4px'}
+				gap={theme.dimensions.drawer.spacing.xs}
+				alignItems={'center'}
+				width={'fit-content'}
 			>
 				{configurationElements.map((element) => (
 					<TabButton

@@ -16,10 +16,14 @@ const ListItemButtonStyled = styled(ListItemButton, {
 	padding: theme.dimensions.common.padding.lg,
 	borderRadius: theme.dimensions.radius.md,
 	'&:hover': {
-		background: theme.palette.state.hover
+		background: isActive ? theme.palette.state.active_surface : theme.palette.state.hover
 	},
 	background:
-		isActive && lastParent === true ? theme.palette.state.focus : isActive && lastParent === undefined ? theme.palette.state.focus : 'transparent'
+		isActive && lastParent === true
+			? theme.palette.state.active_surface
+			: isActive && lastParent === undefined
+			? theme.palette.state.focus
+			: 'transparent'
 }))
 
 export default ListItemButtonStyled

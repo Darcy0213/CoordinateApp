@@ -57,7 +57,12 @@ const HeaderStructure = ({ theme, name, image, color, iconName, onClick }: Props
 					/>
 				)}
 
-				<Typography variant="sys.typo.t1">{name === '' ? 'Name' : name}</Typography>
+				<Typography
+					sx={{ color: theme.palette.sys_primary.on_surface.default }}
+					variant="sys.typo.t1"
+				>
+					{name === '' ? 'Name' : name}
+				</Typography>
 			</Box>
 			{/* meatball menu */}
 

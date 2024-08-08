@@ -16,7 +16,7 @@ const PrimaryColors = (colors: PaletteThemeProps, mode: ThemeMode): PrimaryColor
 		on_primary_container: darkMode ? (blue?.[50] as string) : (blue?.[900] as string),
 		background: {
 			lowest: darkMode ? (gray?.[25] as string) : (gray?.[900] as string),
-			low: darkMode ? (gray?.[50] as string) : (blue?.[900] as string),
+			low: darkMode ? (gray?.[50] as string) : (gray?.[900] as string),
 			medium: darkMode ? (opacity['8_light'] as string) : (opacity['8_dark'] as string),
 			high: darkMode ? (opacity['8_dark'] as string) : (opacity['8_light'] as string),
 			highest: darkMode ? (opacity['2_dark'] as string) : (opacity['8_light'] as string),

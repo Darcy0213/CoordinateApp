@@ -20,8 +20,9 @@ const ResizableDrawerStyled = styled(Drawer, { shouldForwardProp: (prop) => prop
 			background: #fcfbff;
 			width: ${drawerWidth}px;
 			box-sizing: border-box;
-			border-radius: ${theme.dimensions.radius['2xl']};
-			background: ${theme.palette.surface.container_medium};
+			border: 0.5px solid ${theme.palette.sys_primary.outline.medium};
+			border-radius: ${theme.dimensions.radius['xl']};
+			background: ${theme.palette.sys_primary.background.lowest};
 		}
 	`
 )

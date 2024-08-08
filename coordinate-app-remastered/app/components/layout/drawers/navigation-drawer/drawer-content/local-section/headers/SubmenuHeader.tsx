@@ -48,7 +48,12 @@ const HeaderSubmenu = ({ theme, parentIconName, color, parentName, icon, name, o
 					/>
 				)}
 
-				<Typography variant="sys.typo.st3">{parentName === '' ? 'Name' : parentName}</Typography>
+				<Typography
+					sx={{ color: theme.palette.sys_primary.on_surface.default }}
+					variant="sys.typo.st3"
+				>
+					{parentName === '' ? 'Name' : parentName}
+				</Typography>
 			</Box>
 			<Box
 				display={'flex'}
@@ -57,13 +62,18 @@ const HeaderSubmenu = ({ theme, parentIconName, color, parentName, icon, name, o
 				gap={theme.dimensions.common.spacing.lg}
 			>
 				<IconGenerator
-					colorToken={theme.palette.surface.on_surface_variant}
+					colorToken={theme.palette.sys_primary.on_surface.default}
 					iconName={icon}
 					widthToken={theme.dimensions.common.width['2xl'] as string}
 					heightToken={theme.dimensions.common.height['2xl'] as string}
 				/>
 
-				<Typography variant="sys.typo.t1">{name}</Typography>
+				<Typography
+					sx={{ color: theme.palette.sys_primary.on_surface.default }}
+					variant="sys.typo.t1"
+				>
+					{name}
+				</Typography>
 			</Box>
 		</Box>
 	)

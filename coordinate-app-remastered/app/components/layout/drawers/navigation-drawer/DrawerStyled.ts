@@ -14,32 +14,28 @@ const NavigationDrawerStyled = styled(Drawer, {
 	width: openDrawer ? DrawerWidthOpen : DrawerWidthClosed,
 	flexShrink: 0,
 	transition: theme.transitions.create('width', {
-		easing: theme.transitions.easing.sharp,
-		duration: openDrawer ? theme.transitions.duration.enteringScreen : theme.transitions.duration.leavingScreen
+		easing: theme.transitions.easing.sharp
 	}),
 	...(modeDrawer === 'hovered' && {
-		top: '60px',
+		top: '48px',
 		height: '94vh'
 	}),
 
 	'& .MuiDrawer-paper': {
+		position: 'relative',
 		width: openDrawer ? DrawerWidthOpen : DrawerWidthClosed,
 		transition: theme.transitions.create('width', {
-			easing: theme.transitions.easing.sharp,
-			duration: openDrawer ? theme.transitions.duration.enteringScreen : theme.transitions.duration.leavingScreen
+			easing: theme.transitions.easing.sharp
 		}),
 		height: '-webkit-fill-available',
 		...(modeDrawer === 'hovered' && {
-			top: '60px',
 			height: '-webkit-fill-available'
 		}),
 		boxShadow: theme.effects.elevation[1].boxShadow,
 		backdropFilter: theme.effects.elevation[1].backdropFilter,
-		borderRadius: '8px',
-		backgroundColor: theme.palette.surface.container_lowest,
-		marginLeft: `calc( ${theme.dimensions.screen.padding.default} + 1px)`,
-		marginTop: `calc( ${theme.dimensions.screen.padding.default} + 1px)`,
-		marginBottom: `calc( ${theme.dimensions.screen.padding.default} + 1px)`
+		borderRadius: theme.dimensions.radius.xl,
+		border: `0.5px solid ${theme.palette.sys_primary.outline.medium}`,
+		backgroundColor: theme.palette.sys_primary.background.lowest
 	}
 }))
 

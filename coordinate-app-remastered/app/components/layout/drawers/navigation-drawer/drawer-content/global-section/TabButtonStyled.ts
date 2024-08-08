@@ -13,12 +13,12 @@ const TabButtonStyled = styled(IconButton, {
 })(({ theme, isActive }: Props) => ({
 	padding: theme.dimensions.common.padding.md,
 	'&:hover': {
-		background: isActive ? theme.palette.state.active : theme.palette.state.hover
+		background: isActive ? theme.palette.state.active_surface : theme.palette.state.hover
 	},
 	width: 'fit-content',
 	height: 'fit-content',
 	borderRadius: theme.dimensions.radius.lg,
-	background: isActive ? theme.palette.state.active : 'transparent'
+	background: isActive ? theme.palette.state.active_surface : 'transparent'
 }))
 
 export default TabButtonStyled

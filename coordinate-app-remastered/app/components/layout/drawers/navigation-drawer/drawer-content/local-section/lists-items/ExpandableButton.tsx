@@ -40,7 +40,7 @@ const ExpandableNavigationButton = ({
 	lastParent
 }: Props) => {
 	const elementDimensions = theme.dimensions.common
-	const surfaceStyles = theme.palette.surface
+	const surfaceStyles = theme.palette.sys_primary.on_surface
 
 	const isActive = expandedItems.some((item) => item.idItem === id && item.menu === menu)
 
@@ -105,7 +105,7 @@ const ExpandableNavigationButton = ({
 						iconName={isActive ? 'low' : 'breadCrumb'}
 						widthToken={elementDimensions.width.lg}
 						heightToken={elementDimensions.height.lg}
-						colorToken={isActive && lastParent === true ? surfaceStyles.on_surface : surfaceStyles.on_surface_variant}
+						colorToken={isActive && lastParent === true ? surfaceStyles.default : surfaceStyles.variant}
 					/>
 				</Box>
 			) : (
@@ -123,13 +123,13 @@ const ExpandableNavigationButton = ({
 					iconName={iconName}
 					widthToken={elementDimensions.width.sm}
 					heightToken={elementDimensions.height.sm}
-					colorToken={isActive && lastParent === true ? surfaceStyles.on_surface : surfaceStyles.on_surface_variant}
+					colorToken={isActive && lastParent === true ? surfaceStyles.default : surfaceStyles.variant}
 				/>
 
 				<Typography
 					sx={{ flex: 1 }}
 					variant="sys.typo.st1_semibold"
-					color={isActive && lastParent === true ? surfaceStyles.on_surface : surfaceStyles.on_surface_variant}
+					color={isActive && lastParent === true ? surfaceStyles.default : surfaceStyles.variant}
 				>
 					{name}
 				</Typography>

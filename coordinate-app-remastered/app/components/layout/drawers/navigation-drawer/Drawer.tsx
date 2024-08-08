@@ -1,20 +1,19 @@
 import { useTheme } from '@mui/material/styles'
 import { useMemo } from 'react'
-import { SetterOrUpdater, useRecoilValue } from 'recoil'
+import { SetterOrUpdater } from 'recoil'
 
-import { DrawerState, DrawerStateType } from 'app/recoil/selectors'
+import { DrawerStateType } from 'app/recoil/selectors'
 
 import DrawerStyled from './DrawerStyled'
 import { DrawerContent } from './drawer-content'
 
 interface Props {
 	setOpenWithHover: SetterOrUpdater<boolean | null>
+	drawerProperties: DrawerStateType
 }
 
-const NavigationDrawer = ({ setOpenWithHover }: Props) => {
+const NavigationDrawer = ({ setOpenWithHover, drawerProperties }: Props) => {
 	const theme = useTheme()
-
-	const drawerProperties = useRecoilValue<DrawerStateType>(DrawerState)
 
 	// Define a function to handle drawer closing based on a new state
 	const onCloseDrawer = (newState: boolean) => () => {

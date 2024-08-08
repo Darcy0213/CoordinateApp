@@ -1,4 +1,4 @@
-import { Box, Divider } from '@mui/material'
+import { Box } from '@mui/material'
 import { Theme } from '@mui/material/styles'
 
 import { useEffect, useState } from 'react'
@@ -21,7 +21,7 @@ import {
 	WorkspaceInfo
 } from 'app/recoil/atoms'
 import { useRouter } from 'next/navigation'
-import { SimpleNavigationButton, Title } from '../../lists-items'
+import { MenuDivider, SimpleNavigationButton, Title } from '../../lists-items'
 import ObjectsSection from '../ObjectsSection'
 import { useQueryGetObjects, useQueryGetWorkspacesByOrganizationId } from './useApi'
 
@@ -134,7 +134,7 @@ const OrganizationMenu = ({
 				/>
 			))}
 
-			<Divider sx={{ height: '1px' }} />
+			<MenuDivider />
 			<Title
 				theme={theme}
 				name="Objects"
@@ -152,7 +152,7 @@ const OrganizationMenu = ({
 				currentIdToExpand={currentIdToExpand}
 				setCurrentIdToExpand={setCurrentIdToExpand}
 			/>
-			<Divider sx={{ height: '1px' }} />
+			<MenuDivider />
 			<Title
 				theme={theme}
 				name="Spaces"

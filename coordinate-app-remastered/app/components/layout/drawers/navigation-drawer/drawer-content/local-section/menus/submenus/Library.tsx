@@ -1,12 +1,12 @@
 import { DefaultColor } from '@globalTypes/general'
-import { Box, Divider } from '@mui/material'
+import { Box } from '@mui/material'
 import { Theme } from '@mui/material/styles'
 import { LocalTabType, OrganizationInfo, WorkspaceInfo } from 'app/recoil/atoms'
 import { useRouter } from 'next/navigation'
 import { SetterOrUpdater } from 'recoil'
 import HeaderSubmenu from '../../headers/SubmenuHeader'
 import { librarySubmenu, updatePaths } from '../../items'
-import { SimpleNavigationButton } from '../../lists-items'
+import { MenuDivider, SimpleNavigationButton } from '../../lists-items'
 
 interface Props {
 	theme: Theme
@@ -59,7 +59,7 @@ const Library = ({ theme, currentWorkspace, parent, setLocalTab, currentOrganiza
 					navigate.push(parent === 'Workspace' ? `/${currentWorkspace.name}/library` : `/library`)
 				}}
 			/>
-			<Divider sx={{ height: '1px' }} />
+			<MenuDivider />
 			{subMenuItems.map((element, i) => (
 				<SimpleNavigationButton
 					key={i}

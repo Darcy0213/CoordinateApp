@@ -54,9 +54,14 @@ const ConfigurationMenu = ({ theme, setCurrentWorkspace }: ConfigurationMenuProp
 					iconName="settings"
 					widthToken={theme.dimensions.common.width.xl as string}
 					heightToken={theme.dimensions.common.height.xl as string}
-					colorToken={theme.palette.surface.on_surface_variant}
+					colorToken={theme.palette.sys_primary.on_surface.default}
 				/>
-				<Typography variant="sys.typo.t1">Settings</Typography>
+				<Typography
+					sx={{ color: theme.palette.sys_primary.on_surface.default }}
+					variant="sys.typo.t1"
+				>
+					Settings
+				</Typography>
 			</Box>
 			<SimpleBarScroll sx={{ maxHeight: '80vh' }}>
 				<Box
@@ -67,13 +72,13 @@ const ConfigurationMenu = ({ theme, setCurrentWorkspace }: ConfigurationMenuProp
 				>
 					<Typography
 						variant="subtitle1"
-						color="textPrimary"
+						sx={{ color: theme.palette.sys_primary.on_surface.default }}
 					>
 						Theme Mode
 					</Typography>
 					<Typography
 						variant="caption"
-						color="textSecondary"
+						sx={{ color: theme.palette.sys_primary.on_surface.default }}
 					>
 						Choose light or dark mode
 					</Typography>
@@ -81,13 +86,13 @@ const ConfigurationMenu = ({ theme, setCurrentWorkspace }: ConfigurationMenuProp
 
 					<Typography
 						variant="subtitle1"
-						color="textPrimary"
+						sx={{ color: theme.palette.sys_primary.on_surface.default }}
 					>
 						Font Family
 					</Typography>
 					<Typography
 						variant="caption"
-						color="textSecondary"
+						sx={{ color: theme.palette.sys_primary.on_surface.default }}
 					>
 						Choose your font family.
 					</Typography>
@@ -105,7 +110,7 @@ const ConfigurationMenu = ({ theme, setCurrentWorkspace }: ConfigurationMenuProp
 					iconName="logout"
 					widthToken={theme.dimensions.icon.width.lg}
 					heightToken={theme.dimensions.icon.height.lg}
-					colorToken={theme.palette.surface.on_surface_variant}
+					colorToken={theme.palette.sys_primary.on_surface.default}
 				/>
 				<Typography variant="sys.typo.st1_semibold">Logout</Typography>
 			</ListItemButtonStyled>

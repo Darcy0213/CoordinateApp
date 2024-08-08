@@ -1,4 +1,4 @@
-import { Box, Divider } from '@mui/material'
+import { Box } from '@mui/material'
 import { Theme } from '@mui/material/styles'
 import { Element, ObjectType, disableElements, updatePaths } from '../../items'
 
@@ -10,7 +10,7 @@ import Header from './header'
 
 import useGetLocationInfo from '@hooks/useGetLocationInfo'
 import { ExpandedItemState, GlobalTabType, LocalTabType, WorkspaceInfo } from 'app/recoil/atoms'
-import { SimpleNavigationButton, Title } from '../../lists-items'
+import { MenuDivider, SimpleNavigationButton, Title } from '../../lists-items'
 import ObjectsSection from '../ObjectsSection'
 import { useQueryGetObjects } from './useApi'
 
@@ -105,7 +105,7 @@ const WorkspaceMenu = ({
 					submenu={element.submenu}
 				/>
 			))}
-			<Divider sx={{ height: '1px' }} />
+			<MenuDivider />
 			<Title
 				theme={theme}
 				name="Objects"

@@ -1,11 +1,11 @@
 import { IconTypes } from '@globalTypes/icons'
-import { Box, Divider } from '@mui/material'
+import { Box } from '@mui/material'
 import { Theme } from '@mui/material/styles'
 import { CurrentOrganization, CurrentWorkspace, ExpandedItemState, GlobalTabType, RightDrawerState, WorkspaceInfo } from 'app/recoil/atoms'
 import { useRouter } from 'next/navigation'
 import { SetterOrUpdater, useSetRecoilState } from 'recoil'
 import { Element, OrganizationData, disableElements, removeElementsById } from '../../items'
-import { ExpandableNavigationButton, SimpleNavigationButton, Title } from '../../lists-items'
+import { ExpandableNavigationButton, MenuDivider, SimpleNavigationButton, Title } from '../../lists-items'
 import Header from './Header'
 
 interface Props {
@@ -51,10 +51,10 @@ const HomeMenu = ({ theme, commonLocalElements, setSelectedGlobalTab, setExpande
 					parent="Home"
 				/>
 			))}
-			<Divider sx={{ height: '1px' }} />
+			<MenuDivider />
 			<Title
 				theme={theme}
-				name="My objects"
+				name="OBJECTS"
 				actionType="Add"
 				actionName="Add object"
 				onClick={() => console.log('In progress')}
@@ -62,16 +62,16 @@ const HomeMenu = ({ theme, commonLocalElements, setSelectedGlobalTab, setExpande
 			/>
 			<Title
 				theme={theme}
-				name="My spaces"
+				name="SPACES"
 				actionType="Add"
 				actionName="Add space"
 				onClick={() => console.log('In progress')}
 				disabled
 			/>
-			<Divider sx={{ height: '1px' }} />
+			<MenuDivider />
 			<Title
 				theme={theme}
-				name={'Shared with me'}
+				name={'SHARED WITH ME'}
 			/>
 
 			{organizations !== null &&

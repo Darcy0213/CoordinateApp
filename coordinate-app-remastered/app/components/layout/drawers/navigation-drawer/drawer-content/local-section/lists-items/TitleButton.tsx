@@ -18,8 +18,9 @@ const Title = ({ theme, name, onClick, actionName, actionType, disabled }: Props
 		>
 			<Box flex={'1 0 0'}>
 				<Typography
-					color={theme.palette.surface.on_surface_variant}
+					color={theme.palette.sys_primary.on_surface.default}
 					variant="sys.typo.st1"
+					textTransform="uppercase"
 				>
 					{name}
 				</Typography>

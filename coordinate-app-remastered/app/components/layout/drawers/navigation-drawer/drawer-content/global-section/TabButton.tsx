@@ -18,6 +18,7 @@ interface Props {
 
 const TabButton = ({ isActive, name, iconName, path, theme, onClick, disabled, iconLibrary = 'MUI' }: Props) => {
 	const icon = theme.dimensions.icon
+	const onSurface = theme.palette.sys_primary.on_surface
 
 	return path && path !== '' ? (
 		<Link
@@ -43,9 +44,9 @@ const TabButton = ({ isActive, name, iconName, path, theme, onClick, disabled, i
 						<IconGenerator
 							iconLibrary={iconLibrary}
 							iconName={iconName}
-							widthToken={icon.width.lg}
-							heightToken={icon.height.lg}
-							colorToken={isActive ? theme.palette.surface.on_surface : theme.palette.surface.on_surface_variant}
+							widthToken={icon.width.xl as string}
+							heightToken={icon.height.xl as string}
+							colorToken={isActive ? onSurface.default : onSurface.variant}
 						/>
 					</TabButtonStyled>
 				</span>
@@ -70,9 +71,9 @@ const TabButton = ({ isActive, name, iconName, path, theme, onClick, disabled, i
 					<IconGenerator
 						iconLibrary={iconLibrary}
 						iconName={iconName}
-						widthToken={icon.width.lg}
-						heightToken={icon.height.lg}
-						colorToken={isActive ? theme.palette.surface.on_surface : theme.palette.surface.on_surface_variant}
+						widthToken={icon.width.xl as string}
+						heightToken={icon.height.xl as string}
+						colorToken={isActive ? onSurface.default : onSurface.variant}
 					/>
 				</TabButtonStyled>
 			</span>

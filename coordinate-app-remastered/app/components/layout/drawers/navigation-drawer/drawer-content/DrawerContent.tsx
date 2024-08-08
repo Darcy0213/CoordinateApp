@@ -17,11 +17,13 @@ const DrawerContent = () => {
 
 	return (
 		<Box
+			className="drawer-content"
 			flexDirection={'row'}
 			display={'flex'}
 			height={'-webkit-fill-available'}
-			boxShadow={'0px -0.5px 1.5px 0.5px rgba(0, 0, 0, 0.02), 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.08)'}
 			borderRadius={theme.dimensions.radius.xl}
+			gap={theme.dimensions.drawer.spacing.xs}
+			sx={{ backgroundColor: theme.palette.sys_primary.background.highest }}
 		>
 			<GlobalSection
 				theme={theme}

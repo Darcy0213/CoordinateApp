@@ -102,7 +102,7 @@ const ListItemButton = ({
 			) : (
 				iconName && (
 					<IconGenerator
-						colorToken={isActive ? theme.palette.surface.on_surface : theme.palette.surface.on_surface_variant}
+						colorToken={isActive ? theme.palette.sys_primary.on_surface.default : theme.palette.sys_primary.on_surface.variant}
 						iconName={iconName}
 						widthToken={elementDimensions.width.lg}
 						heightToken={elementDimensions.height.lg}
@@ -112,7 +112,7 @@ const ListItemButton = ({
 			)}
 			<Typography
 				variant="sys.typo.st1_semibold"
-				color={isActive ? theme.palette.surface.on_surface : theme.palette.surface.on_surface_variant}
+				color={isActive ? theme.palette.sys_primary.on_surface.default : theme.palette.sys_primary.on_surface.variant}
 			>
 				{name}
 			</Typography>

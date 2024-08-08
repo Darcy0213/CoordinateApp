@@ -56,7 +56,7 @@ const ExpandableObjectButton = ({
 }: Props) => {
 	const elementDimensions = theme.dimensions.common
 	const iconDimensions = theme.dimensions.icon
-	const surfaceStyles = theme.palette.surface
+	const surfaceStyles = theme.palette.sys_primary.on_surface
 
 	const { workspaceName, workspaceId, organizationId } = useGetLocationInfo()
 
@@ -124,7 +124,7 @@ const ExpandableObjectButton = ({
 							iconName={isActive ? 'low' : 'breadCrumb'}
 							widthToken={iconDimensions.width.md}
 							heightToken={iconDimensions.height.md}
-							colorToken={isActive && lastParent === true ? surfaceStyles.on_surface : surfaceStyles.on_surface_variant}
+							colorToken={isActive && lastParent === true ? surfaceStyles.default : surfaceStyles.variant}
 						/>
 					</Box>
 				) : (
